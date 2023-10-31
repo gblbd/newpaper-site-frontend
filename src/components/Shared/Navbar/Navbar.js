@@ -62,7 +62,7 @@ const Navbar = () => {
       </div>
 
       {/* search and signin signup */}
-      <div className="lg:flex lg:justify-around mt-4">
+      <div className="lg:flex lg:justify-around sm:flex sm:justify-around mt-4 sm:mt-6">
         <div className="flex gap-4 mb-4">
           <span className="lg:mx-4 lg:text-4xl text-2xl ml-2">
             <AiOutlineMenu />
@@ -94,7 +94,7 @@ const Navbar = () => {
       {/*  navbar menu option desing */}
       <div className="border-2 border-l-0 border-r-0 py-6 mt-6 items-center">
         <ul class="list-none lg:flex lg:gap-10 gap-2 justify-center grid">
-          <div className="flex items-center gap-2 lg:gap-10">
+          <div className="flex items-center gap-4 lg:gap-10 sm:gap-4 ">
             <li>সর্বশেষ</li>
             <li>জাতীয়</li>
             <li>রাজনীতি</li>
@@ -102,7 +102,7 @@ const Navbar = () => {
             <li>বিশ্ব</li>
             <li>বিনোদন</li>
           </div>
-          <div className="flex items-center gap-2 lg:gap-10">
+          <div className="flex items-center gap-5 sm:gap-4 lg:gap-10">
             <li>খেলা</li>
             <li>বাণিজ্য</li>
             <li>চাকরি</li>
