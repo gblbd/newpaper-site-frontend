@@ -173,11 +173,11 @@ const PoliticsNews = () => {
               এটি আধুনিক করুন
             </button>
             <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-12 ">
-              <div className=" grid grid-cols-2">
-                <div className=" gap-2 mt-6 mb-6">
-                  <div className="relative">
+              <div className=" grid sm:grid-cols-2">
+                <div className=" gap-2 mt-6 mb-6 sm:w-full w-full">
+                  <div className="relative max-sm:mx-auto">
                     <Image
-                      className="w-[250px] h-[110px]"
+                      className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
                       alt="image"
                     ></Image>
@@ -200,9 +200,9 @@ const PoliticsNews = () => {
 
                 {/*  mew div */}
                 <div className=" gap-2 mt-6 mb-6">
-                  <div className="relative">
+                  <div className="relative max-sm:mx-auto">
                     <Image
-                      className="w-[250px] h-[110px]"
+                      className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
                       alt="image"
                     ></Image>
@@ -214,7 +214,7 @@ const PoliticsNews = () => {
                     </button>
                   </div>
                   <div className="w-100  items-start mt-4">
-                    <h2 className="font-bold text-[15px]">
+                    <h2 className="font-bold text-[15px] mb-4 font-sans font-noto-sans-bengali text-justify">
                       দাবার টেবিলের মেঝে এবং বড় গোলাকার সহ লাক্স হলওয়ে
                     </h2>
                     <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
@@ -226,9 +226,9 @@ const PoliticsNews = () => {
                 {/*  mew div */}
 
                 <div className=" gap-2 mt-6 mb-6">
-                  <div className="relative">
+                  <div className="relative max-sm:mx-auto">
                     <Image
-                      className="w-[250px] h-[110px]"
+                      className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
                       alt="image"
                     ></Image>
@@ -240,7 +240,7 @@ const PoliticsNews = () => {
                     </button>
                   </div>
                   <div className="w-100  items-start mt-4">
-                    <h2 className="font-bold text-[15px]">
+                    <h2 className="font-bold text-[15px] mb-4 font-sans font-noto-sans-bengali text-justify">
                       পুরুষরা এখানে $50.00 পূরণ করতে অগ্রসর হয়
                     </h2>
                     <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
@@ -251,9 +251,9 @@ const PoliticsNews = () => {
 
                 {/*    new div */}
                 <div className=" gap-2 mt-6 mb-6">
-                  <div className="relative">
+                  <div className="relative max-sm:mx-auto">
                     <Image
-                      className="w-[250px] h-[110px]"
+                      className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
                       alt="image"
                     ></Image>
@@ -265,7 +265,7 @@ const PoliticsNews = () => {
                     </button>
                   </div>
                   <div className="w-100  items-start mt-4">
-                    <h2 className="font-bold text-[15px]">
+                    <h2 className="font-bold text-[15px] mb-4 font-sans font-noto-sans-bengali text-justify">
                       মেট্রো টাইলস ডিজাইন সহ সুন্দর বাথরুম
                     </h2>
                     <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
