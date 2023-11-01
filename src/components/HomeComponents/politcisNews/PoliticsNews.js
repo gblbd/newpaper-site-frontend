@@ -173,9 +173,9 @@ const PoliticsNews = () => {
               এটি আধুনিক করুন
             </button>
             <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-12 ">
-              <div className=" grid sm:grid-cols-2">
+              <div className=" grid sm:grid-cols-2 ">
                 <div className=" gap-2 mt-6 mb-6 sm:w-full w-full">
-                  <div className="relative max-sm:mx-auto">
+                  <div className="relative max-sm:mx-auto mx-2">
                     <Image
                       className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
@@ -200,7 +200,7 @@ const PoliticsNews = () => {
 
                 {/*  mew div */}
                 <div className=" gap-2 mt-6 mb-6">
-                  <div className="relative max-sm:mx-auto">
+                  <div className="relative max-sm:mx-auto  mx-2">
                     <Image
                       className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
@@ -226,7 +226,7 @@ const PoliticsNews = () => {
                 {/*  mew div */}
 
                 <div className=" gap-2 mt-6 mb-6">
-                  <div className="relative max-sm:mx-auto">
+                  <div className="relative max-sm:mx-auto  mx-2">
                     <Image
                       className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
@@ -250,8 +250,8 @@ const PoliticsNews = () => {
                 </div>
 
                 {/*    new div */}
-                <div className=" gap-2 mt-6 mb-6">
-                  <div className="relative max-sm:mx-auto">
+                <div className=" gap-2 mt-6 mb-6 ">
+                  <div className="relative max-sm:mx-auto  mx-2">
                     <Image
                       className="lg:w-[250px] h-[110px]  w-full"
                       src={sideimg1}
