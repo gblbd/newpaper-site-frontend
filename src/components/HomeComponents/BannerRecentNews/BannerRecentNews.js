@@ -17,7 +17,7 @@ const BannerRecentNews = () => {
           <h2 className="font-bold lg:text-[40px] text-[16px]">
             বাঁচা-মরার লড়াইয়ে ভারতের মুখোমুখি বাংলাদেশ
           </h2>
-          <p className="font-medium lg:text-[20px] text-[14px] mb-4">
+          <p className="font-medium lg:text-[20px] text-[14px] mb-4 font-sans font-noto-sans-bengali">
             ২০২৩ ওয়ানডে বিশ্বকাপে প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ শুরু
             পেয়েছিল বাংলাদেশ। কিন্তু পরের দুই ম্যাচে ইংল্যান্ড ও নিউজিল্যান্ডের
             কাছে ধরাশায়ী হয় টাইগাররা। টানা দুই পরাজয়ের পর ঘুরে দাঁড়ানোর লক্ষ্যে
@@ -40,7 +40,7 @@ const BannerRecentNews = () => {
             <h2 className="font-bold text-[20px] mt-7">
               এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
             </h2>
-            <p className="font-normal text-[16px]">
+            <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
               ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল সফর
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
@@ -62,7 +62,7 @@ const BannerRecentNews = () => {
             <h2 className="font-bold text-[20px] mt-7">
               এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
             </h2>
-            <p className="font-normal text-[16px]">
+            <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
               ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল সফর
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
@@ -84,7 +84,7 @@ const BannerRecentNews = () => {
             <h2 className="font-bold text-[20px] mt-7">
               এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
             </h2>
-            <p className="font-normal text-[16px]">
+            <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
               ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল সফর
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
