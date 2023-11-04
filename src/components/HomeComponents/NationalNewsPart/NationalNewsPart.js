@@ -34,7 +34,7 @@ const NationalNewsPart = () => {
               </h2>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
-              <p className="font-medium lg:text-[20px] text-[14px] mb-4 font-sans font-noto-sans-bengali text-justify">
+              <p className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify">
                 ২০২৩ ওয়ানডে বিশ্বকাপে প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ
                 শুরু পেয়েছিল বাংলাদেশ। কিন্তু পরের দুই ম্যাচে ইংল্যান্ড ও
                 নিউজিল্যান্ডের কাছে ধরাশায়ী হয় টাইগাররা। টানা দুই পরাজয়ের পর

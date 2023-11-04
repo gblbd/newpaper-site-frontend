@@ -11,11 +11,11 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "footer-texture": "url('/footer/footer.png')",
       },
+
       fontFamily: {
-        fontFamily: {
-          "noto-sans-bengali": ["Noto Sans Bengali", "sans-serif"],
-        },
+        "noto-sans-bengali": ["Noto Sans Bengali", "sans-serif"],
       },
     },
   },

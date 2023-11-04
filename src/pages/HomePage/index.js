@@ -1,3 +1,4 @@
+import FooterComponents from "@/components/FooterComponents/FooterComponents";
 import Advertise from "@/components/HomeComponents/Addvertise/Advertise";
 import BannerRecentNews from "@/components/HomeComponents/BannerRecentNews/BannerRecentNews";
 import NationalNewsPart from "@/components/HomeComponents/NationalNewsPart/NationalNewsPart";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Advertise></Advertise>
       <NationalNewsPart></NationalNewsPart>
       <PoliticsNews></PoliticsNews>
+      <FooterComponents></FooterComponents>
     </div>
   );
 };
