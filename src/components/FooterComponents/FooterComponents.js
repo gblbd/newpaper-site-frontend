@@ -16,15 +16,15 @@ const FooterComponents = () => {
               সারাদেশ
             </h2>
 
-            <div className="flex gap-2 mt-4">
-              <div className="w-[162px] h-[91px]">
+            <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
+              <div className="col-span-2">
                 <Image
-                  className="w-[162px] h-[91px]"
+                  className="w-full h-full"
                   src={sideimg1}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-2">
+              <div className="col-span-3 mt-2">
                 <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
                   মাধ্যমিক স্কুলে ভর্তির আবেদন শুরু ২৪ অক্টোবর
                 </h2>
@@ -35,19 +35,19 @@ const FooterComponents = () => {
             </div>
 
             {/*  mew div */}
-            <div className="flex gap-2 mt-6">
-              <div className="w-[162px] h-[91px]">
+            <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
+              <div className="col-span-2">
                 <Image
-                  className="w-[162px] h-[91px]"
+                  className="w-full h-full"
                   src={sideimg2}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-2">
-                <h2 className="lg:text-[20px] sm:text-[14px] font-semibold  text-white">
-                  সাত কলেজে ভর্তির চূড়ান্ত তালিকা প্রকাশ
+              <div className="col-span-3 mt-2">
+                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                  কলেজে ভর্তি হতে পারেনি সাড়ে ১২ হাজার শিক্ষার্থী
                 </h2>
-                <p className=" lg:text-[16px] sm:text-[14px]  font-noto-sans-bengali  text-white">
+                <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
@@ -55,19 +55,19 @@ const FooterComponents = () => {
 
             {/*  mew div */}
 
-            <div className="flex gap-2 mt-6">
-              <div className="w-[162px] h-[91px]">
+            <div className="grid grid-cols-5 gap-4 mx-auto mt-4">
+              <div className="col-span-2">
                 <Image
-                  className="w-[162px] h-[91px]"
-                  src={sideimg2}
+                  className="w-full h-full"
+                  src={sideimg3}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-2">
-                <h2 className="lg:text-[20px] sm:text-[14px] font-semibold  text-white">
-                  কলেজে ভর্তি হতে পারেনি সাড়ে ১২ হাজার শিক্ষার্থী
+              <div className="col-span-3 mt-2">
+                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                  সাত কলেজে ভর্তির চূড়ান্ত তালিকা প্রকাশ
                 </h2>
-                <p className=" lg:text-[16px] sm:text-[14px]  text-white font-noto-sans-bengali">
+                <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
@@ -75,15 +75,11 @@ const FooterComponents = () => {
 
             {/*    new div */}
             {/* logo iv */}
-            <div className="flex gap-2 mt-36">
-              <div className="w-[162px] h-[91px]">
-                <Image
-                  className="w-[162px] h-[91px]"
-                  src={logo}
-                  alt="image"
-                ></Image>
+            <div className="flex  mt-36">
+              <div className="">
+                <Image className="w-full" src={logo} alt="image"></Image>
               </div>
-              <div className="w-100  items-start mx-4">
+              <div className="  items-start mx-4">
                 <h2 className="font-bold text-[20px]  text-white">যোগাযোগ:</h2>
                 <p className="lg:text-[20px] sm:text-[14px] font-semibold font-noto-sans-bengali  text-white">
                   Gorgeous Bangladesh Limited
@@ -97,17 +93,17 @@ const FooterComponents = () => {
               {" "}
               ভিডিও
             </h2>
-            <div className="flex gap-4 mt-4">
-              <div className="w-[162px] h-[91px]">
+            <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
+              <div className="col-span-2">
                 <Image
-                  className="w-[162px] h-[91px]"
+                  className="w-full h-full"
                   src={sideimg3}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-2">
-                <h2 className="lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                  মাধ্যমিক স্কুলে ভর্তির আবেদন শুরু ২৪ অক্টোবর
+              <div className="col-span-3 mt-2">
+                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                  কোনো আরব দেশই ফিলিস্তিনিদের জন্য সীমান্ত খুলছে না
                 </h2>
                 <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
@@ -116,19 +112,19 @@ const FooterComponents = () => {
             </div>
 
             {/*  mew div */}
-            <div className="flex gap-4 mt-6">
-              <div className="w-[162px] h-[91px]">
+            <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
+              <div className="col-span-2">
                 <Image
-                  className="w-[162px] h-[91px]"
+                  className="w-full h-full"
                   src={sideimg4}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-2">
-                <h2 className="lg:text-[20px] sm:text-[14px] font-semibold  text-white">
-                  সাত কলেজে ভর্তির চূড়ান্ত তালিকা প্রকাশ
+              <div className="col-span-3 mt-2">
+                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                  জানা গেল ঘূর্ণিঝড় ‘তেজ’ কবে আঘাত হানবে
                 </h2>
-                <p className=" lg:text-[16px] sm:text-[14px]  font-noto-sans-bengali  text-white">
+                <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
@@ -136,19 +132,19 @@ const FooterComponents = () => {
 
             {/*  mew div */}
 
-            <div className="flex gap-2 mt-6">
-              <div className="w-[162px] h-[91px]">
+            <div className="grid grid-cols-5 gap-4 mx-auto mt-4">
+              <div className="col-span-2">
                 <Image
-                  className="w-[162px] h-[91px]"
+                  className="w-full h-full"
                   src={sideimg5}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-2">
-                <h2 className="lg:text-[20px] sm:text-[14px] font-semibold  text-white">
-                  কলেজে ভর্তি হতে পারেনি সাড়ে ১২ হাজার শিক্ষার্থী
+              <div className="col-span-3 mt-2">
+                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                  ফিলিস্তিনের ভূখণ্ড ফেরত চাইলেন সৌদি যুবরাজ
                 </h2>
-                <p className=" lg:text-[16px] sm:text-[14px]  text-white font-noto-sans-bengali">
+                <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
