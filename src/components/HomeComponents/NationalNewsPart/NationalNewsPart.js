@@ -8,7 +8,7 @@ import newspaper from "../../../assets/national/newspaper1.png";
 import user from "../../../assets/national/user.png";
 const NationalNewsPart = () => {
   return (
-    <div className="lg:container lg:mx-auto mt-4 grid lg:grid-cols-3 gap-4">
+    <div className=" mt-4 grid lg:grid-cols-3 gap-4">
       <div className="lg:col-span-2 ">
         <button
           className="bg-[#066F30]  text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"

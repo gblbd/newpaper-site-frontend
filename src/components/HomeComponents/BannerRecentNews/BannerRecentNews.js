@@ -5,7 +5,7 @@ import sideimg2 from "../../../assets/banner/side2.png";
 import sideimg3 from "../../../assets/banner/side3.png";
 const BannerRecentNews = () => {
   return (
-    <div class="lg:container lg:mx-auto grid lg:grid-cols-2 lg:gap-x-32  lg:my-6 grid-cols-none">
+    <div class=" grid lg:grid-cols-2 lg:gap-x-32  lg:my-6 grid-cols-none">
       <div className="">
         <div>
           <Image className="w-full" src={banner} alt="img"></Image>

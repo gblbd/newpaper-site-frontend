@@ -19,8 +19,8 @@ const Navbar = () => {
           className="lg:w-30 lg:h-30  absolute lg:top-1/2 lg:left-1/2 w-20 h-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
       </div>
-      <div className="flex justify-between">
-        <div className="flex justify-around  lg:p-4 p-2">
+      <div className="grid sm:grid-cols-2 sm:gap-24 sm:mt-4 mt-12">
+        <div className="flex gap-4 sm:justify-end mb-4 border">
           <Image
             className="lg:w-12 lg:h-10  mx-2 w-4 h-4"
             src={socialicon1} // Replace with the URL or path to your image
@@ -47,17 +47,33 @@ const Navbar = () => {
             alt="Centered Image"
           />
         </div>
-        <div className="flex justify-around p-2 lg:p-4">
-          <Image
-            className="lg:w-12 lg:h-10  mx-2 w-4 h-4"
-            src={applicon1} // Replace with the URL or path to your image
-            alt="Centered Image"
-          />
-          <Image
-            className="lg:w-12 lg:h-10  mx-2 w-4 h-4"
-            src={applicon2} // Replace with the URL or path to your image
-            alt="Centered Image"
-          />
+        <div className="flex justify-between ">
+          <div className="flex">
+            <Image
+              className="lg:w-12 lg:h-10  mx-2 w-4 h-4"
+              src={applicon1} // Replace with the URL or path to your image
+              alt="Centered Image"
+            />
+            <Image
+              className="lg:w-12 lg:h-10  mx-2 w-4 h-4"
+              src={applicon2} // Replace with the URL or path to your image
+              alt="Centered Image"
+            />
+          </div>
+          <div className="flex mr-4">
+            <button
+              className="bg-[#747775] text-white rounded-xl w-20"
+              type="button"
+            >
+              English
+            </button>
+            <button
+              className="bg-[#066F30] text-white  rounded-xl ml-4 w-20"
+              type="button"
+            >
+              বাংলা
+            </button>
+          </div>
         </div>
       </div>
 
@@ -95,7 +111,7 @@ const Navbar = () => {
       <div className="border-2 border-l-0 border-r-0 border-b-0 py-6 mt-6 items-center">
         <div className="text-2xl font-bold font-noto-sans-bengali text-green-600 overflow-hidden">
           <div className="marquee">
-            এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী | সংঘাত ও অনিশ্চয়তার |
+            এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী ** সংঘাত ও অনিশ্চয়তার **
             চার বড় সমাবেশে ভোটের বার্তা দেবে আওয়ামী লীগ মধ্যে রাজনীতি
           </div>
         </div>

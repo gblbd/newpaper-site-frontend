@@ -4,6 +4,7 @@ import BannerRecentNews from "@/components/HomeComponents/BannerRecentNews/Banne
 import Entertainment from "@/components/HomeComponents/Entertainment/Entertainment";
 import NationalNewsPart from "@/components/HomeComponents/NationalNewsPart/NationalNewsPart";
 import WorldComponent from "@/components/HomeComponents/WorldComponent/WorldComponent";
+
 import PoliticsNews from "@/components/HomeComponents/politcisNews/PoliticsNews";
 import Navbar from "@/components/Shared/Navbar/Navbar";
 
@@ -11,12 +12,14 @@ const HomePage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <BannerRecentNews></BannerRecentNews>
-      <Advertise></Advertise>
-      <NationalNewsPart></NationalNewsPart>
-      <PoliticsNews></PoliticsNews>
-      <WorldComponent></WorldComponent>
-      <Entertainment></Entertainment>
+      <div className="max-w-7xl mx-auto">
+        <BannerRecentNews></BannerRecentNews>
+        <Advertise></Advertise>
+        <NationalNewsPart></NationalNewsPart>
+        <PoliticsNews></PoliticsNews>
+        <WorldComponent></WorldComponent>
+        <Entertainment></Entertainment>
+      </div>
       <FooterComponents></FooterComponents>
     </div>
   );
