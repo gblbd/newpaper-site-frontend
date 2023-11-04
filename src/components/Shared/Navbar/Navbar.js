@@ -95,7 +95,8 @@ const Navbar = () => {
       <div className="border-2 border-l-0 border-r-0 border-b-0 py-6 mt-6 items-center">
         <div className="text-2xl font-bold font-noto-sans-bengali text-green-600 overflow-hidden">
           <div className="marquee">
-            এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
+            এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী | সংঘাত ও অনিশ্চয়তার |
+            চার বড় সমাবেশে ভোটের বার্তা দেবে আওয়ামী লীগ মধ্যে রাজনীতি
           </div>
         </div>
       </div>
