@@ -20,7 +20,7 @@ const Navbar = () => {
         />
       </div>
       <div className="grid sm:grid-cols-2 sm:gap-24 sm:mt-4 mt-12">
-        <div className="flex gap-4 sm:justify-end mb-4 border">
+        <div className="flex gap-4 sm:justify-end mb-4 ">
           <Image
             className="lg:w-12 lg:h-10  mx-2 w-4 h-4"
             src={socialicon1} // Replace with the URL or path to your image
