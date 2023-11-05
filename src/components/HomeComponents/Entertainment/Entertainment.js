@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import feaure from "../../../assets/kitchen/feature1.png";
 import feaure2 from "../../../assets/kitchen/feature2.png";
 import sideimg1 from "../../../assets/kitchen/kitchen2.png";
@@ -10,7 +11,7 @@ const Entertainment = () => {
     <div className=" mt-4 grid lg:grid-cols-3 gap-4 mb-20">
       <div className="lg:col-span-2 ">
         <button
-          className="bg-[#066F30]  text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
+          className="bg-[#066F30] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
           বিনোদন
@@ -28,9 +29,11 @@ const Entertainment = () => {
                 </h5> */}
             </div>
             <div className=" px-1">
-              <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
-                সেরা বড় ঘর ধারনা | বাড়ির নকশা
-              </h2>
+              <Link href="#">
+                <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
+                  সেরা বড় ঘর ধারনা | বাড়ির নকশা
+                </h2>
+              </Link>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
               <p className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify">
@@ -57,9 +60,12 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-3 items-start mt-4">
-                  <h2 className="font-bold text-[20px]">
-                    হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি এবং উপাদান
-                  </h2>
+                  <Link href="#">
+                    <h2 className="font-bold text-[20px]">
+                      হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি এবং উপাদান
+                    </h2>
+                  </Link>
+
                   <p className="font-normal text-[16px]  font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
                   </p>
@@ -77,9 +83,12 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-3 items-start mt-4">
-                  <h2 className="font-bold text-[20px]">
-                    ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
-                  </h2>
+                  <Link href="#">
+                    <h2 className="font-bold text-[20px]">
+                      ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
+                    </h2>
+                  </Link>
+
                   <p className="font-normal text-[16px]  font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
                   </p>
@@ -98,9 +107,11 @@ const Entertainment = () => {
                 </h5> */}
             </div>
             <div className=" px-1">
-              <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
-                রেডিও বিজ্ঞাপন: ছোট ব্যবসা গাইড
-              </h2>
+              <Link href="">
+                <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
+                  রেডিও বিজ্ঞাপন: ছোট ব্যবসা গাইড
+                </h2>
+              </Link>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
               <p className="font-medium lg:text-[20px] text-[14px] mb-2  font-noto-sans-bengali text-justify">
@@ -127,9 +138,11 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-3 items-start mt-4">
-                  <h2 className="font-bold text-[20px]">
-                    হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি
-                  </h2>
+                  <Link href="#">
+                    <h2 className="font-bold text-[20px]">
+                      হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি
+                    </h2>
+                  </Link>
                   <p className="font-normal text-[16px]  font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
                   </p>
@@ -147,9 +160,11 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-3 items-start mt-4">
-                  <h2 className="font-bold text-[20px]">
-                    ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
-                  </h2>
+                  <Link href="#">
+                    <h2 className="font-bold text-[20px]">
+                      ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
+                    </h2>
+                  </Link>
                   <p className="font-normal text-[16px]  font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
                   </p>
@@ -162,7 +177,7 @@ const Entertainment = () => {
 
       <div className="lg:col-span-1">
         <button
-          className="bg-[#000000] text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
+          className="bg-[#000000] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
           ভিডিও এবং স্টোরি
@@ -198,10 +213,13 @@ const Entertainment = () => {
                     এটি আধুনিক করুন
                   </button>
                 </div>
-                <div className="flex flex-col  items-start mt-4">
-                  <h2 className="font-bold text-[15px]">
-                    ভবিষ্যতের শহুরে রান্নাঘর
-                  </h2>
+                <div className="flex flex-col  items-start mt-8">
+                  <Link href="#">
+                    <h2 className="font-bold text-[15px] mb-2  font-noto-sans-bengali text-justify">
+                      ভবিষ্যতের শহুরে রান্নাঘর
+                    </h2>
+                  </Link>
+
                   <p className="font-normal text-[16px] font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
                   </p>
@@ -219,11 +237,14 @@ const Entertainment = () => {
                     এটি আধুনিক করুন
                   </button>
                 </div>
-                <div className="flex flex-col  items-start mt-4">
-                  <h2 className="font-bold text-[15px] mb-4 font-sans font-noto-sans-bengali text-justify">
-                    দাবার টেবিলের মেঝে এবং বড় গোলাকার সহ লাক্স হলওয়ে
-                  </h2>
-                  <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
+                <div className="flex flex-col  items-start mt-8">
+                  <Link href="#">
+                    <h2 className="font-bold text-[15px] mb-2  font-noto-sans-bengali text-justify">
+                      দাবার টেবিলের মেঝে এবং বড় গোলাকার সহ লাক্স হলওয়ে
+                    </h2>
+                  </Link>
+
+                  <p className="font-normal text-[16px] font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
                   </p>
                 </div>
@@ -245,11 +266,14 @@ const Entertainment = () => {
                     এটি আধুনিক করুন
                   </button>
                 </div>
-                <div className="flex flex-col items-start mt-4">
-                  <h2 className="font-bold text-[15px] mb-4 font-sans font-noto-sans-bengali text-justify">
-                    পুরুষরা এখানে $50.00 পূরণ করতে অগ্রসর হয়
-                  </h2>
-                  <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
+                <div className="flex flex-col items-start mt-8">
+                  <Link href="#">
+                    <h2 className="font-bold text-[15px] mb-2 font-noto-sans-bengali text-justify">
+                      পুরুষরা এখানে $50.00 পূরণ করতে অগ্রসর হয়
+                    </h2>
+                  </Link>
+
+                  <p className="font-normal text-[16px]  font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
                   </p>
                 </div>
@@ -270,8 +294,8 @@ const Entertainment = () => {
                     এটি আধুনিক করুন
                   </button>
                 </div>
-                <div className="flex flex-col mt-4 ">
-                  <h2 className="font-bold text-[15px] mb-4 font-noto-sans-bengali text-justify">
+                <div className="flex flex-col mt-8">
+                  <h2 className="font-bold text-[15px] mb-2 font-noto-sans-bengali text-justify">
                     মেট্রো টাইলস ডিজাইন সহ সুন্দর বাথরুম
                   </h2>
                   <p className="font-normal text-[16px] font-noto-sans-bengali">

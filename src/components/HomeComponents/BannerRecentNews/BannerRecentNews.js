@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import banner from "../../../assets/banner/image2.png";
 import sideimg1 from "../../../assets/banner/side1.png";
 import sideimg2 from "../../../assets/banner/side2.png";
@@ -34,15 +35,18 @@ const BannerRecentNews = () => {
         <div className="flex gap-2 mt-0">
           <div>
             <Image
-              className="w-[370px] h-[174px]"
+              className="w-[400px] h-[174px]"
               src={sideimg1}
               alt="image"
             ></Image>
           </div>
           <div className="w-100  items-start">
-            <h2 className="font-bold text-[20px] mt-7">
-              এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
-            </h2>
+            <Link href="#">
+              <h2 className="font-bold text-[20px] mt-7">
+                এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
+              </h2>
+            </Link>
+
             <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
               ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল সফর
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
@@ -63,15 +67,17 @@ const BannerRecentNews = () => {
         <div className="flex gap-2 mt-3">
           <div>
             <Image
-              className="w-[370px] h-[174px]"
+              className="w-[400px] h-[174px]"
               src={sideimg3}
               alt="image"
             ></Image>
           </div>
           <div className="w-100 items-center">
-            <h2 className="font-bold text-[20px] mt-7">
-              এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
-            </h2>
+            <Link href="#">
+              <h2 className="font-bold text-[20px] mt-7">
+                এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
+              </h2>
+            </Link>
             <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
               ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল সফর
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
@@ -91,15 +97,17 @@ const BannerRecentNews = () => {
         <div className="flex gap-2 mt-3">
           <div>
             <Image
-              className="w-[370px] h-[174px]"
+              className="w-[400px] h-[174px]"
               src={sideimg2}
               alt="image"
             ></Image>
           </div>
           <div className="w-100 items-center">
-            <h2 className="font-bold text-[20px] mt-7">
-              এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
-            </h2>
+            <Link href="#">
+              <h2 className="font-bold text-[20px] mt-7">
+                এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
+              </h2>
+            </Link>
             <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
               ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল সফর
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ

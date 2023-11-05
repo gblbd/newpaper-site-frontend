@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import newspaper from "../../../assets/national/newspaper1.png";
 import user from "../../../assets/national/user.png";
 import banner from "../../../assets/world/banner.png";
@@ -11,12 +12,12 @@ const WorldComponent = () => {
     <div className=" mt-4 grid lg:grid-cols-3 gap-4">
       <div className="lg:col-span-2 ">
         <button
-          className="bg-[#066F30]  text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
+          className="bg-[#066F30] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
           বিশ্ব
         </button>
-        <div className="h-1 w-full border-b-[1px] border-black mb-12 "></div>
+        <div className="h-[2px] w-full border-b-[1px] border-black mb-12 "></div>
 
         {/*    new desin part */}
         <div className="lg:container lg:mx-auto grid lg:grid-cols-2 lg:gap-x-5  lg:my-6 grid-cols-none">
@@ -29,9 +30,11 @@ const WorldComponent = () => {
               </h5> */}
             </div>
             <div className=" px-1">
-              <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
-                2023 সালের সেরা সমসাময়িক ডিজাইন স্টাইল আইডিয়াস - ডেকোরিলা
-              </h2>
+              <Link href="#">
+                <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
+                  2023 সালের সেরা সমসাময়িক ডিজাইন স্টাইল আইডিয়াস - ডেকোরিলা
+                </h2>
+              </Link>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
               <p className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify">
@@ -61,9 +64,12 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
+
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -81,9 +87,12 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
+
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -101,9 +110,12 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
+
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -120,9 +132,12 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
+
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -133,12 +148,12 @@ const WorldComponent = () => {
       </div>
       <div className="lg:col-span-1">
         <button
-          className="bg-[#000000] text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
+          className="bg-[#000000] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
           অনলাইন জরিপ
         </button>
-        <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-10 "></div>
+        <div className="h-[2px] lg:w-full w-full border-b-[1px] border-black mb-10 "></div>
 
         <div>
           <h3>১৭ অক্টোবর ২০২৩, ০৫:৩৪ পিএম</h3>

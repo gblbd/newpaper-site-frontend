@@ -122,39 +122,39 @@ const Navbar = () => {
       <div className="border-2 border-l-0 border-r-0 py-6  items-center">
         <ul class="list-none lg:flex lg:gap-10 gap-2 justify-center grid">
           <div className="flex items-center gap-4 lg:gap-10 sm:gap-4 font-bold">
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               সর্বশেষ{" "}
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               জাতীয়
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               রাজনীতি
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               সারাদেশ
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               বিশ্ব
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               বিনোদন
             </li>
           </div>
           <div className="flex items-center gap-5 sm:gap-4 lg:gap-10 font-bold">
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               খেলা
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               বাণিজ্য
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               চাকরি
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               মতামত
             </li>
-            <li className=" hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               ভিডিও
             </li>
           </div>

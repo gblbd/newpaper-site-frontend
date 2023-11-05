@@ -1,10 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../assets/footer/footerlogo.png";
 import sideimg1 from "../../assets/footer/image1.png";
 import sideimg2 from "../../assets/footer/image2.png";
 import sideimg3 from "../../assets/footer/image3.png";
-import sideimg4 from "../../assets/footer/image4.png";
-import sideimg5 from "../../assets/footer/image5.png";
 const FooterComponents = () => {
   return (
     <div className="mt-10 max-w-7xl mx-auto">
@@ -25,9 +24,11 @@ const FooterComponents = () => {
                 ></Image>
               </div>
               <div className="col-span-3 mt-2">
-                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                  মাধ্যমিক স্কুলে ভর্তির আবেদন শুরু ২৪ অক্টোবর
-                </h2>
+                <Link href="#">
+                  <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                    মাধ্যমিক স্কুলে ভর্তির আবেদন শুরু ২৪ অক্টোবর
+                  </h2>
+                </Link>
                 <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -44,9 +45,11 @@ const FooterComponents = () => {
                 ></Image>
               </div>
               <div className="col-span-3 mt-2">
-                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                  কলেজে ভর্তি হতে পারেনি সাড়ে ১২ হাজার শিক্ষার্থী
-                </h2>
+                <Link href="#">
+                  <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                    জানা গেল ঘূর্ণিঝড় ‘তেজ’ কবে আঘাত হানবে
+                  </h2>
+                </Link>
                 <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -64,9 +67,11 @@ const FooterComponents = () => {
                 ></Image>
               </div>
               <div className="col-span-3 mt-2">
-                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                  সাত কলেজে ভর্তির চূড়ান্ত তালিকা প্রকাশ
-                </h2>
+                <Link href="#">
+                  <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                    সাত কলেজে ভর্তির চূড়ান্ত তালিকা প্রকাশ
+                  </h2>
+                </Link>
                 <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -84,11 +89,16 @@ const FooterComponents = () => {
             </h2>
             <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
               <div className="col-span-2">
-                <Image
-                  className="w-full h-full"
-                  src={sideimg3}
-                  alt="image"
-                ></Image>
+                <div className="">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
               <div className="col-span-3 mt-2">
                 <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
@@ -103,16 +113,24 @@ const FooterComponents = () => {
             {/*  mew div */}
             <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
               <div className="col-span-2">
-                <Image
-                  className="w-full h-full"
-                  src={sideimg4}
-                  alt="image"
-                ></Image>
+                <div className="">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
               <div className="col-span-3 mt-2">
-                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                  জানা গেল ঘূর্ণিঝড় ‘তেজ’ কবে আঘাত হানবে
-                </h2>
+                <Link href="#">
+                  <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                    জানা গেল ঘূর্ণিঝড় ‘তেজ’ কবে আঘাত হানবে
+                  </h2>
+                </Link>
+
                 <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -123,16 +141,23 @@ const FooterComponents = () => {
 
             <div className="grid grid-cols-5 gap-4 mx-auto mt-4">
               <div className="col-span-2">
-                <Image
-                  className="w-full h-full"
-                  src={sideimg5}
-                  alt="image"
-                ></Image>
+                <div className="">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
               <div className="col-span-3 mt-2">
-                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                  ফিলিস্তিনের ভূখণ্ড ফেরত চাইলেন সৌদি যুবরাজ
-                </h2>
+                <Link href="#">
+                  <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
+                    জানা গেল ঘূর্ণিঝড় ‘তেজ’ কবে আঘাত হানবে
+                  </h2>
+                </Link>
                 <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -217,8 +242,8 @@ const FooterComponents = () => {
                 <h2 className="font-bold text-[20px]  text-white">যোগাযোগ:</h2>
               </div>
               <div className="">
-                <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white">
-                  Gorgeous Bangladesh Limited
+                <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white uppercase">
+                  dainik janashakti
                 </p>
                 <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white">
                   MAG House, House No-20, Shah Makhdum Avenue, Uttara Sector

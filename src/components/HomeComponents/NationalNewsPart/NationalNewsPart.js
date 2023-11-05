@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import banner from "../../../assets/banner/image2.png";
 import sideimg1 from "../../../assets/national/image1.png";
 import sideimg2 from "../../../assets/national/image2.png";
@@ -11,7 +12,7 @@ const NationalNewsPart = () => {
     <div className=" mt-4 grid lg:grid-cols-3 gap-4">
       <div className="lg:col-span-2 ">
         <button
-          className="bg-[#066F30]  text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
+          className="bg-[#066F30] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
           জাতীয়
@@ -29,9 +30,11 @@ const NationalNewsPart = () => {
               </h5> */}
             </div>
             <div className=" px-1">
-              <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
-                2023 সালের সেরা সমসাময়িক ডিজাইন স্টাইল আইডিয়াস - ডেকোরিলা
-              </h2>
+              <Link href="#">
+                <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
+                  2023 সালের সেরা সমসাময়িক ডিজাইন স্টাইল আইডিয়াস - ডেকোরিলা
+                </h2>
+              </Link>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
               <p className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify">
@@ -61,9 +64,11 @@ const NationalNewsPart = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -81,9 +86,12 @@ const NationalNewsPart = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
+
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -101,9 +109,11 @@ const NationalNewsPart = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -120,9 +130,11 @@ const NationalNewsPart = () => {
                 ></Image>
               </div>
               <div className=" col-span-2 items-start mt-4">
-                <h2 className="font-bold text-[20px]">
-                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
-                </h2>
+                <Link href="#">
+                  <h2 className="font-bold text-[20px]">
+                    ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
+                  </h2>
+                </Link>
                 <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
@@ -133,7 +145,7 @@ const NationalNewsPart = () => {
       </div>
       <div className="lg:col-span-1">
         <button
-          className="bg-[#000000] text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
+          className="bg-[#000000] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
           অনলাইন জরিপ
