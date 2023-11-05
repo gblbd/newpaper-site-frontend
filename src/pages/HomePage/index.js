@@ -2,6 +2,7 @@ import FooterComponents from "@/components/FooterComponents/FooterComponents";
 import Advertise from "@/components/HomeComponents/Addvertise/Advertise";
 import BannerRecentNews from "@/components/HomeComponents/BannerRecentNews/BannerRecentNews";
 import Entertainment from "@/components/HomeComponents/Entertainment/Entertainment";
+import Motamot_Component from "@/components/HomeComponents/Motamot_Component/Motamot_Component";
 import NationalNewsPart from "@/components/HomeComponents/NationalNewsPart/NationalNewsPart";
 import TotalCountry from "@/components/HomeComponents/TotalCountry/TotalCountry";
 import VideoShowSection from "@/components/HomeComponents/VideoSHowSection/VideoShowSection";
@@ -22,6 +23,7 @@ const HomePage = () => {
         <TotalCountry></TotalCountry>
         <WorldComponent></WorldComponent>
         <Entertainment></Entertainment>
+        <Motamot_Component></Motamot_Component>
         <VideoShowSection></VideoShowSection>
       </div>
       <FooterComponents></FooterComponents>

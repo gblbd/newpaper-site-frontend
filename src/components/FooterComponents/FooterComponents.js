@@ -10,7 +10,7 @@ const FooterComponents = () => {
     <div className="mt-10 max-w-7xl mx-auto">
       <div className="bg-footer-texture sm:w-full bg-cover bg-no-repeat">
         <div className="sm:container sm:mx-auto grid sm:grid-cols-3 sm:gap-8 ">
-          <div className=" mt-12 sm:ml-8 ml-2">
+          <div className=" mt-12 lg:ml-8 ml-2">
             <h2 className="text-[26px] font-noto-sans-bengali text-white">
               {" "}
               সারাদেশ
@@ -75,17 +75,6 @@ const FooterComponents = () => {
 
             {/*    new div */}
             {/* logo iv */}
-            <div className="flex  mt-36">
-              <div className="">
-                <Image className="w-full" src={logo} alt="image"></Image>
-              </div>
-              <div className="  items-start mx-4">
-                <h2 className="font-bold text-[20px]  text-white">যোগাযোগ:</h2>
-                <p className="lg:text-[20px] sm:text-[14px] font-semibold font-noto-sans-bengali  text-white">
-                  Gorgeous Bangladesh Limited
-                </p>
-              </div>
-            </div>
           </div>
 
           <div className=" mt-12 ml-2">
@@ -214,9 +203,36 @@ const FooterComponents = () => {
           </div>
         </div>
 
-        <h3 className="font-normal text-[16px]  text-white font-noto-sans-bengali text-right mr-6">
-          এই ওয়েবসাইটের কোনো লেখা, ছবি, ভিডিও অনুমতি ছাড়া ব্যবহার বেআইনি।
-        </h3>
+        <div>
+          <div className="flex mt-36 sm:flex-row mb-4">
+            <div className="lg:flex-col w-40 ml-8">
+              <Image
+                className="lg:w-full h-full"
+                src={logo}
+                alt="image"
+              ></Image>
+            </div>
+            <div className="flex lg:flex-col flex-col ml-2">
+              <div>
+                <h2 className="font-bold text-[20px]  text-white">যোগাযোগ:</h2>
+              </div>
+              <div className="">
+                <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white">
+                  Gorgeous Bangladesh Limited
+                </p>
+                <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white">
+                  MAG House, House No-20, Shah Makhdum Avenue, Uttara Sector
+                  -11, Dhaka-1230
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-normal text-[16px]  text-white font-noto-sans-bengali text-right mr-6">
+              এই ওয়েবসাইটের কোনো লেখা, ছবি, ভিডিও অনুমতি ছাড়া ব্যবহার বেআইনি।
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   );
