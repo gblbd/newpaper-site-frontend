@@ -4,6 +4,7 @@ import BannerRecentNews from "@/components/HomeComponents/BannerRecentNews/Banne
 import Entertainment from "@/components/HomeComponents/Entertainment/Entertainment";
 import NationalNewsPart from "@/components/HomeComponents/NationalNewsPart/NationalNewsPart";
 import TotalCountry from "@/components/HomeComponents/TotalCountry/TotalCountry";
+import VideoShowSection from "@/components/HomeComponents/VideoSHowSection/VideoShowSection";
 import WorldComponent from "@/components/HomeComponents/WorldComponent/WorldComponent";
 
 import PoliticsNews from "@/components/HomeComponents/politcisNews/PoliticsNews";
@@ -21,6 +22,7 @@ const HomePage = () => {
         <TotalCountry></TotalCountry>
         <WorldComponent></WorldComponent>
         <Entertainment></Entertainment>
+        <VideoShowSection></VideoShowSection>
       </div>
       <FooterComponents></FooterComponents>
     </div>
