@@ -9,15 +9,15 @@ const BannerRecentNews = () => {
       <div className="">
         <div>
           <Image className="w-full" src={banner} alt="img"></Image>
-          <h5 className="text-center lg:text-[22px] text-[12px]">
-            দুপুরে স্বাগতিক ভারতের বিপক্ষে মাঠে নামছে বাংলাদেশ। ছবি : সংগৃহীত
+          <h5 className="text-center lg:text-[18px] text-[12px]">
+            ভারতের বিপক্ষে মাঠে নামছে বাংলাদেশ। ছবি : সংগৃহীত
           </h5>
         </div>
-        <div className="text-justify px-1">
-          <h2 className="font-bold lg:text-[40px] text-[16px]">
-            বাঁচা-মরার লড়াইয়ে ভারতের মুখোমুখি বাংলাদেশ
+        <div className=" px-1">
+          <h2 className="font-bold lg:text-[30px] text-[16px] font-noto-sans-bengali">
+            প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ শুরু
           </h2>
-          <p className="font-medium lg:text-[20px] text-[14px] mb-4 font-sans font-noto-sans-bengali">
+          <p className="font-medium lg:text-[20px] text-[14px] mb-4 font-noto-sans-bengali text-justify">
             ২০২৩ ওয়ানডে বিশ্বকাপে প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ শুরু
             পেয়েছিল বাংলাদেশ। কিন্তু পরের দুই ম্যাচে ইংল্যান্ড ও নিউজিল্যান্ডের
             কাছে ধরাশায়ী হয় টাইগাররা। টানা দুই পরাজয়ের পর ঘুরে দাঁড়ানোর লক্ষ্যে
@@ -25,13 +25,16 @@ const BannerRecentNews = () => {
             ভারতকে চ্যালেঞ্জ জানাতে প্রস্তুত টাইগার শিবির।
           </p>
         </div>
+        <button type="button" className=" sm:m-4 m-4 hover:text-[#be5959]">
+          বিস্তারিত...
+        </button>
       </div>
       {/* side data */}
       <div className="">
         <div className="flex gap-2 mt-0">
           <div>
             <Image
-              className="w-[300px] h-[184px]"
+              className="w-[370px] h-[174px]"
               src={sideimg1}
               alt="image"
             ></Image>
@@ -45,15 +48,22 @@ const BannerRecentNews = () => {
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
             </p>
+            <button
+              type="button"
+              className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
+            >
+              বিস্তারিত...
+            </button>
           </div>
         </div>
+
         <div className="h-1 w-100 border-b-[1px] border-black mt-4"></div>
 
         {/*  mew div */}
         <div className="flex gap-2 mt-3">
           <div>
             <Image
-              className="w-[300px] h-[184px]"
+              className="w-[370px] h-[174px]"
               src={sideimg3}
               alt="image"
             ></Image>
@@ -67,6 +77,12 @@ const BannerRecentNews = () => {
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
             </p>
+            <button
+              type="button"
+              className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
+            >
+              বিস্তারিত...
+            </button>
           </div>
         </div>
         <div className="h-1 w-100 border-b-[1px] border-black mt-4"></div>
@@ -75,7 +91,7 @@ const BannerRecentNews = () => {
         <div className="flex gap-2 mt-3">
           <div>
             <Image
-              className="w-[300px] h-[184px]"
+              className="w-[370px] h-[174px]"
               src={sideimg2}
               alt="image"
             ></Image>
@@ -89,6 +105,12 @@ const BannerRecentNews = () => {
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
             </p>
+            <button
+              type="button"
+              className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
+            >
+              বিস্তারিত...
+            </button>
           </div>
         </div>
       </div>

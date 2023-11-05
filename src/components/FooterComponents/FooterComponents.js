@@ -7,10 +7,10 @@ import sideimg4 from "../../assets/footer/image4.png";
 import sideimg5 from "../../assets/footer/image5.png";
 const FooterComponents = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 max-w-7xl mx-auto">
       <div className="bg-footer-texture sm:w-full bg-cover bg-no-repeat">
-        <div className="sm:container sm:mx-auto grid sm:grid-cols-3 sm:gap-8">
-          <div className=" mt-12">
+        <div className="sm:container sm:mx-auto grid sm:grid-cols-3 sm:gap-8 ">
+          <div className=" mt-12 sm:ml-8 ml-2">
             <h2 className="text-[26px] font-noto-sans-bengali text-white">
               {" "}
               সারাদেশ
@@ -88,7 +88,7 @@ const FooterComponents = () => {
             </div>
           </div>
 
-          <div className=" mt-12">
+          <div className=" mt-12 ml-2">
             <h2 className="text-[26px] font-noto-sans-bengali  text-white">
               {" "}
               ভিডিও

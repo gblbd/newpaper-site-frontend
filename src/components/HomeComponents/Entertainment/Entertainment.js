@@ -29,7 +29,7 @@ const Entertainment = () => {
             </div>
             <div className=" px-1">
               <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
-                সেরা বড় ঘর ধারনা | বাড়ির নকশা, বাড়ির শৈলী, বিলাসবহুল বাড়ি
+                সেরা বড় ঘর ধারনা | বাড়ির নকশা
               </h2>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
@@ -39,6 +39,12 @@ const Entertainment = () => {
                 যেমন রং, আলো এবং উপকরণ নির্বাচন করে অভ্যন্তরীণ স্থানগুলিকে
                 কার্যকরী, নিরাপদ এবং সুন্দর করে তোলে...।
               </p>
+              <button
+                type="button"
+                className=" font-semibold mb-4 hover:text-[#be5959]"
+              >
+                বিস্তারিত...
+              </button>
             </div>
 
             <div className="">
@@ -97,12 +103,18 @@ const Entertainment = () => {
               </h2>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
-              <p className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify">
+              <p className="font-medium lg:text-[20px] text-[14px] mb-2  font-noto-sans-bengali text-justify">
                 একজন ইন্টেরিয়র ডিজাইনার কি করেন?অভ্যন্তরীণ ডিজাইনাররা স্থানের
                 প্রয়োজনীয়তা নির্ধারণ করে এবং প্রয়োজনীয় এবং আলংকারিক আইটেম
                 যেমন রং, আলো এবং উপকরণ নির্বাচন করে অভ্যন্তরীণ স্থানগুলিকে
                 কার্যকরী, নিরাপদ এবং সুন্দর করে তোলে...।
               </p>
+              <button
+                type="button"
+                className=" font-semibold mb-4 hover:text-[#be5959]"
+              >
+                বিস্তারিত...
+              </button>
             </div>
 
             <div className="mt-2">
@@ -116,7 +128,7 @@ const Entertainment = () => {
                 </div>
                 <div className="col-span-3 items-start mt-4">
                   <h2 className="font-bold text-[20px]">
-                    হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি এবং উপাদান
+                    হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি
                   </h2>
                   <p className="font-normal text-[16px]  font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
@@ -155,7 +167,7 @@ const Entertainment = () => {
         >
           ভিডিও এবং স্টোরি
         </button>
-        <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-12 "></div>
+        <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-10 "></div>
 
         <div>
           <h3>১৭ অক্টোবর ২০২৩, ০৫:৩৪ পিএম</h3>

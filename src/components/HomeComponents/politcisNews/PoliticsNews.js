@@ -29,7 +29,7 @@ const PoliticsNews = () => {
             </div>
             <div className=" px-1">
               <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
-                সেরা বড় ঘর ধারনা | বাড়ির নকশা, বাড়ির শৈলী, বিলাসবহুল বাড়ি
+                সেরা বড় ঘর ধারনা | বাড়ির নকশা
               </h2>
 
               <h3 className="mt-4 mb-2">২২ অক্টোবর ২০২৩</h3>
@@ -39,6 +39,12 @@ const PoliticsNews = () => {
                 যেমন রং, আলো এবং উপকরণ নির্বাচন করে অভ্যন্তরীণ স্থানগুলিকে
                 কার্যকরী, নিরাপদ এবং সুন্দর করে তোলে...।
               </p>
+              <button
+                type="button"
+                className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
+              >
+                বিস্তারিত...
+              </button>
             </div>
 
             <div className="">
@@ -62,7 +68,7 @@ const PoliticsNews = () => {
 
               {/*  mew div */}
 
-              <div className="grid grid-cols-5 gap-4 gap-2 mt-0">
+              <div className="grid grid-cols-5 gap-4 mt-0">
                 <div className="col-span-2">
                   <Image
                     className="w-full mt-4"
@@ -103,9 +109,15 @@ const PoliticsNews = () => {
                 যেমন রং, আলো এবং উপকরণ নির্বাচন করে অভ্যন্তরীণ স্থানগুলিকে
                 কার্যকরী, নিরাপদ এবং সুন্দর করে তোলে...।
               </p>
+              <button
+                type="button"
+                className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
+              >
+                বিস্তারিত...
+              </button>
             </div>
 
-            <div className="mt-2">
+            <div className="">
               <div className="grid grid-cols-5 gap-4 mt-0">
                 <div className="col-span-2">
                   <Image
@@ -126,7 +138,7 @@ const PoliticsNews = () => {
 
               {/*  mew div */}
 
-              <div className="grid grid-cols-5 gap-4 ">
+              <div className="grid grid-cols-5 gap-4 mt-0">
                 <div className="col-span-2">
                   <Image
                     className="w-full mt-4"
@@ -136,7 +148,7 @@ const PoliticsNews = () => {
                 </div>
                 <div className="col-span-3 items-start mt-4">
                   <h2 className="font-bold text-[20px]">
-                    ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
+                    হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি এবং উপাদান
                   </h2>
                   <p className="font-normal text-[16px]  font-noto-sans-bengali">
                     ২২ অক্টোবর ২০২৩
@@ -155,7 +167,7 @@ const PoliticsNews = () => {
         >
           ভিডিও এবং স্টোরি
         </button>
-        <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-12 "></div>
+        <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-10 "></div>
 
         <div>
           <h3>১৭ অক্টোবর ২০২৩, ০৫:৩৪ পিএম</h3>

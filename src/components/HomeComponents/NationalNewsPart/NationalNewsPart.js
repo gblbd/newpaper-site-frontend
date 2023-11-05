@@ -43,42 +43,48 @@ const NationalNewsPart = () => {
                 টাইগার শিবির।
               </p>
             </div>
+            <button
+              type="button"
+              className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
+            >
+              বিস্তারিত...
+            </button>
           </div>
           {/* side data */}
           <div className="">
-            <div className="flex gap-2 mt-0">
-              <div>
+            <div className="grid grid-cols-3 gap-2 mt-0">
+              <div className="col-span-1">
                 <Image
-                  className="w-[325px] h-[106px]"
+                  className="w-full h-full"
                   src={sideimg1}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-4">
+              <div className=" col-span-2 items-start mt-4">
                 <h2 className="font-bold text-[20px]">
                   ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                 </h2>
-                <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
+                <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
             </div>
-            <div className="h-1 w-100 border-b-[1px] border-black mt-4"></div>
+            <div className="h-1  border-b-[1px] border-black mt-4"></div>
 
             {/*  mew div */}
-            <div className="flex gap-2 mt-0">
-              <div>
+            <div className="grid grid-cols-3 gap-2 mt-0">
+              <div className="col-span-1">
                 <Image
-                  className="w-[300px] h-[106px]"
+                  className="w-full h-full"
                   src={sideimg2}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-4">
+              <div className=" col-span-2 items-start mt-4">
                 <h2 className="font-bold text-[20px]">
-                  বাড়ির ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র ডিজাইন |
+                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                 </h2>
-                <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
+                <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
@@ -86,39 +92,38 @@ const NationalNewsPart = () => {
             <div className="h-1 w-100 border-b-[1px] border-black mt-4"></div>
             {/*  mew div */}
 
-            <div className="flex gap-2 mt-0">
-              <div>
+            <div className="grid grid-cols-3 gap-2 mt-0">
+              <div className="col-span-1">
                 <Image
-                  className="w-[355px] h-[106px]"
+                  className="w-full h-full"
                   src={sideimg3}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-4">
+              <div className=" col-span-2 items-start mt-4">
                 <h2 className="font-bold text-[20px]">
-                  লোয়েব/ব্রেন বিজয়ী দম্পতির জন্য তৃতীয় গাড়ি পুনরুজ্জীবিত |
+                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                 </h2>
-                <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
+                <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
             </div>
             <div className="h-1 w-100 border-b-[1px] border-black mt-4"></div>
             {/*    new div */}
-            <div className="flex gap-2 mt-0">
-              <div>
+            <div className="grid grid-cols-3 gap-2 mt-0">
+              <div className="col-span-1">
                 <Image
-                  className="w-[355px] h-[106px]"
+                  className="w-full h-full"
                   src={sideimg4}
                   alt="image"
                 ></Image>
               </div>
-              <div className="w-100  items-start mt-4">
+              <div className=" col-span-2 items-start mt-4">
                 <h2 className="font-bold text-[20px]">
-                  রান্নাঘরের অভ্যন্তরীণ নকশা: রান্নাঘর পুনর্নির্মাণের চূড়ান্ত
-                  গাইড
+                  ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                 </h2>
-                <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
+                <p className="font-normal text-[16px] font-noto-sans-bengali">
                   ২২ অক্টোবর ২০২৩
                 </p>
               </div>
@@ -133,12 +138,12 @@ const NationalNewsPart = () => {
         >
           অনলাইন জরিপ
         </button>
-        <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-12 "></div>
+        <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-10 "></div>
 
         <div>
           <h3>১৭ অক্টোবর ২০২৩, ০৫:৩৪ পিএম</h3>
           <Image className="w-full h-[185px]" src={user} alt=""></Image>
-          <p className="font-bold text-[16px] font-sans font-noto-sans-bengali mt-2 mb-4">
+          <p className="font-bold text-[16px]  font-noto-sans-bengali mt-2 mb-4">
             বাংলাদেশ ব্যাংকের সাবেক গভর্নর আতিউর রহমান বলেছেন, মূল্যস্ফীতির
             কারণে মানুষ বিপর্যস্ত আপনি কি তার সঙ্গে একমত?
           </p>
