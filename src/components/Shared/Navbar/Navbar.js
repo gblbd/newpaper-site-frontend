@@ -9,13 +9,13 @@ import socialicon4 from "../../../assets/header/social4.png";
 import socialicon5 from "../../../assets/header/social5.png";
 const Navbar = () => {
   return (
-    <div className="mt-20 text-center">
+    <div className="mt-20 text-center ">
       <div className="relative">
         <div className="h-1  border-4 "></div>
         <Image
           src={image} // Replace with the URL or path to your image
           alt="Centered Image"
-          className="lg:w-30 lg:h-30  absolute lg:top-1/2 lg:left-1/2 w-44 h-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="lg:w-[250px] lg:h-30  absolute lg:top-1/2 lg:left-1/2 w-44 h-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
       </div>
       <div className="max-w-7xl mx-auto ">
@@ -119,9 +119,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="border-2 border-l-0 border-r-0 py-6  items-center ">
-        <ul class="list-none lg:flex lg:gap-10 gap-2 justify-center grid max-w-7xl mx-auto">
-          <div className="flex items-start gap-5 lg:gap-14  sm:gap-4 font-bold">
+      <div className="border-2 border-l-0 border-r-0 py-6 ">
+        <ul class="list-none lg:flex lg:gap-10 gap-2 justify-center grid">
+          <div className="flex items-start gap-2 lg:gap-12  sm:gap-4 font-bold">
             <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               সর্বশেষ{" "}
             </li>
@@ -138,28 +138,23 @@ const Navbar = () => {
             <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               সারাদেশ
             </li>
-            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
-              বিশ্ব
-            </li>
+          </div>
+          <div className="flex items-start gap-5 sm:gap-4 lg:gap-12 font-bold">
             <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               বিনোদন
             </li>
-          </div>
-          <div className="flex items-start gap-5 sm:gap-4 lg:gap-14 font-bold">
-            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
-              খেলা
-            </li>
-            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
-              বাণিজ্য
-            </li>
-            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
-              চাকরি
-            </li>
+
             <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               মতামত
             </li>
             <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               ভিডিও
+            </li>
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+              চাকরি
+            </li>
+            <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
+              খেলা
             </li>
           </div>
         </ul>

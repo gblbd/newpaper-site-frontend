@@ -15,7 +15,7 @@ const WorldComponent = () => {
           className="bg-[#066F30] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
-          বিশ্ব
+          আন্তর্জাতিক
         </button>
         <div className="h-[2px] w-full border-b-[1px] border-black mb-12 "></div>
 

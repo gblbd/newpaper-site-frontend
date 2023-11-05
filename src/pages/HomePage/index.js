@@ -19,9 +19,10 @@ const HomePage = () => {
         <BannerRecentNews></BannerRecentNews>
         <Advertise></Advertise>
         <NationalNewsPart></NationalNewsPart>
+        <WorldComponent></WorldComponent>
         <PoliticsNews></PoliticsNews>
         <TotalCountry></TotalCountry>
-        <WorldComponent></WorldComponent>
+
         <Entertainment></Entertainment>
         <Motamot_Component></Motamot_Component>
         <VideoShowSection></VideoShowSection>

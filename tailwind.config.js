@@ -17,6 +17,12 @@ module.exports = {
       fontFamily: {
         "noto-sans-bengali": ["Noto Sans Bengali", "sans-serif"],
       },
+      inset: {
+        0: "0",
+      },
+      position: {
+        sticky: "sticky",
+      },
     },
   },
   plugins: [],
