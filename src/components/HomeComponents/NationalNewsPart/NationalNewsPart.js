@@ -5,8 +5,7 @@ import sideimg1 from "../../../assets/national/image1.png";
 import sideimg2 from "../../../assets/national/image2.png";
 import sideimg3 from "../../../assets/national/image3.png";
 import sideimg4 from "../../../assets/national/image4.png";
-import newspaper from "../../../assets/national/newspaper1.png";
-import user from "../../../assets/national/user.png";
+import user from "../../../assets/national/user2.png";
 const NationalNewsPart = () => {
   return (
     <div className=" mt-4 grid lg:grid-cols-3 gap-4">
@@ -148,68 +147,34 @@ const NationalNewsPart = () => {
           className="bg-[#000000] font-bold text-white lg:px-10 lg:py-2 lg:mb-[-3px]  lg:ml-0 mt-1 px-10 py-2 mb-[-3px]"
           type="button"
         >
-          অনলাইন জরিপ
+          সম্পাদকীয়
         </button>
         <div className="h-1 lg:w-full w-full border-b-[1px] border-black mb-10 "></div>
 
         <div>
           <h3>১৭ অক্টোবর ২০২৩, ০৫:৩৪ পিএম</h3>
           <Image className="w-full h-[185px]" src={user} alt=""></Image>
-          <p className="font-bold text-[16px]  font-noto-sans-bengali mt-2 mb-4">
-            বাংলাদেশ ব্যাংকের সাবেক গভর্নর আতিউর রহমান বলেছেন, মূল্যস্ফীতির
-            কারণে মানুষ বিপর্যস্ত আপনি কি তার সঙ্গে একমত?
+          <h2 className="font-bold text-[20px]  mt-4 mb-4 font-noto-sans-bengali">
+            পোশাকশ্রমিকদের মজুরি অচলাবস্থা কারও জন্যই মঙ্গলজনক নয়
+          </h2>
+
+          <p className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify">
+            পোশাকশ্রমিকদের মজুরি বৃদ্ধি নিয়ে সৃষ্ট অচলাবস্থা নিরসনে মালিক ও
+            শ্রমিক—কোনো পক্ষ থেকেই বিচক্ষণ উদ্যোগ দেখতে না পাওয়াটা রীতিমতো
+            হতাশাজনক। বরং দুই পক্ষ চরম অবস্থান নেওয়ায় একদিকে যেমন সহিংসতা থামছে
+            না, অন্যদিকে একের পর এক কারখানা বন্ধ রাখতে হচ্ছে। সহিংসতায় এ পর্যন্ত
+            দুজন শ্রমিক নিহত হয়েছেন, যা অত্যন্ত বেদনাদায়ক। এ ছাড়া যানবাহন,
+            বিভিন্ন স্থাপনায় অগ্নিসংযোগ ও ভাঙচুরের ঘটনা ঘটেছে। এ পরিস্থিতি কারও
+            জন্যই কাম্য ছিল না। প্রথম আলোর খবর জানাচ্ছে, চলতি বছরের এপ্রিল মাসে
+            পোশাকশ্রমিকদের মজুরি নির্ধারণে সরকার নিম্নতম মজুরি
           </p>
-
+          <button
+            type="button"
+            className=" font-semibold mb-4 mt-2 hover:text-[#be5959]"
+          >
+            বিস্তারিত...
+          </button>
           {/* pool system desin */}
-          <div className="space-y-4">
-            <div className="flex items-center">
-              <div className="w-6 h-6 p-1 mr-4">
-                <input
-                  type="radio"
-                  className="form-radio h-4 w-4 text-indigo-600"
-                  name="poll_option"
-                  value="option1"
-                />
-              </div>
-              <div className="flex-grow w-full border-solid border-2 pl-6 py-1 border-[#0000004D] rounded mb-2">
-                Option 1
-              </div>
-            </div>
-
-            <div className="flex items-center">
-              <div className="w-6 h-6 p-1 mr-4">
-                <input
-                  type="radio"
-                  className="form-radio h-4 w-4 text-indigo-600"
-                  name="poll_option"
-                  value="option2"
-                />
-              </div>
-              <div className="flex-grow w-full border-solid border-2 pl-6 py-1 border-[#0000004D] rounded">
-                Option 2
-              </div>
-            </div>
-
-            <div className="flex items-center">
-              <div className="w-6 h-6 p-1 mr-4">
-                <input
-                  type="radio"
-                  className="form-radio h-4 w-4 text-indigo-600"
-                  name="poll_option"
-                  value="option3"
-                />
-              </div>
-              <div className="flex-grow w-full border-solid border-2 pl-6 py-1 border-[#0000004D] rounded mb-2">
-                Option 3
-              </div>
-            </div>
-          </div>
-
-          <Image
-            className="w-full mt-2 h-[185px]"
-            src={newspaper}
-            alt=""
-          ></Image>
         </div>
       </div>
     </div>

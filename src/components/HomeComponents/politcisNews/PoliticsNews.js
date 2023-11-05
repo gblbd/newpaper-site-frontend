@@ -4,7 +4,7 @@ import feaure from "../../../assets/kitchen/feature1.png";
 import feaure2 from "../../../assets/kitchen/feature2.png";
 import sideimg1 from "../../../assets/kitchen/kitchen2.png";
 import sideimg2 from "../../../assets/kitchen/kitchen3.png";
-import user from "../../../assets/kitchen/kitchen4.png";
+import user from "../../../assets/national/story.png";
 
 const PoliticsNews = () => {
   return (

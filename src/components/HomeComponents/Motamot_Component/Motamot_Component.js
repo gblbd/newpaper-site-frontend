@@ -185,10 +185,10 @@ const Motamot_Component = () => {
 
         <div>
           <div className="">
-            <p className="bg-[#066F30] text-center font-semibold text-white px-4">
+            {/*  <p className="bg-[#066F30] text-center font-semibold text-white px-4">
               আর্কাইভ
-            </p>
-            <div class="flex items-center justify-center  px-4">
+            </p> */}
+            <div class="flex items-center justify-center  px-4 border-2 rounded-xl border-green-600">
               <div class="max-w-sm w-full shadow-lg">
                 <div class="md:p-8 p-5 dark:bg-gray-800 bg-white rounded-t">
                   <div class="px-4 flex items-center justify-between">

@@ -229,7 +229,7 @@ const FooterComponents = () => {
         </div>
 
         <div>
-          <div className="flex mt-36 sm:flex-row mb-4">
+          <div className="flex mt-32 sm:flex-row mb-4">
             <div className="lg:flex-col w-40 ml-8">
               <Image
                 className="lg:w-full h-full"
@@ -245,10 +245,7 @@ const FooterComponents = () => {
                 <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white uppercase">
                   dainik janashakti
                 </p>
-                <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white">
-                  MAG House, House No-20, Shah Makhdum Avenue, Uttara Sector
-                  -11, Dhaka-1230
-                </p>
+                <p className="lg:text-[12px] sm:text-[12px] font-normal font-noto-sans-bengali  text-white"></p>
               </div>
             </div>
           </div>

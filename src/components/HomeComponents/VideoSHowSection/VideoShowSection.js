@@ -14,8 +14,8 @@ const VideoShowSection = () => {
 
         {/*    new desin part */}
         <div className=" grid sm:grid-cols-3 sm:gap-3  sm:my-6 grid-cols-none">
-          <div className="border grid grid-rows-4 rounded-xl shadow-md border-black">
-            <div className="row-span-3">
+          <div className="border grid grid-rows-6 rounded-xl shadow-md border-black">
+            <div className="row-span-5">
               <iframe
                 className="p-4 w-full h-full"
                 src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
@@ -37,30 +37,8 @@ const VideoShowSection = () => {
               </p>
             </div>
           </div>
-          <div className="border grid grid-rows-4 rounded-xl shadow-md border-black">
-            <div className="row-span-3">
-              <iframe
-                className="p-4 w-full h-full"
-                src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="mt-1 row-span-1 ml-4">
-              <Link href="#">
-                <h2 className="font-noto-sans-bengali text-black font-medium">
-                  বাংলাদেশ ভ্রমণে নাগরিকদের সতর্ক করল ইসরায়েল
-                </h2>
-              </Link>
-              <p className="font-noto-sans-bengali text-black font-light text-sm">
-                ১৯ অক্টোবর ২০২৩
-              </p>
-            </div>
-          </div>
-          <div className="border grid grid-rows-4 rounded-xl shadow-md border-black">
-            <div className="row-span-3">
+          <div className="border grid grid-rows-6 rounded-xl shadow-md border-black">
+            <div className="row-span-5">
               <iframe
                 className="p-4 w-full h-full"
                 src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
@@ -82,8 +60,8 @@ const VideoShowSection = () => {
               </p>
             </div>
           </div>
-          <div className="border grid grid-rows-4 rounded-xl shadow-md border-black">
-            <div className="row-span-3">
+          <div className="border grid grid-rows-6 rounded-xl shadow-md border-black">
+            <div className="row-span-5">
               <iframe
                 className="p-4 w-full h-full"
                 src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
@@ -96,29 +74,7 @@ const VideoShowSection = () => {
             <div className="mt-1 row-span-1 ml-4">
               <Link href="#">
                 <h2 className="font-noto-sans-bengali text-black font-medium">
-                  প্রকল্প শেষে জমা হয়নি 55 গাড়ি, ৬৯টির হদিস নেই
-                </h2>
-              </Link>
-              <p className="font-noto-sans-bengali text-black font-light text-sm">
-                ১৯ অক্টোবর ২০২৩
-              </p>
-            </div>
-          </div>
-          <div className="border grid grid-rows-4 rounded-xl shadow-md border-black">
-            <div className="row-span-3">
-              <iframe
-                className="p-4 w-full h-full"
-                src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="mt-1 row-span-1 ml-4">
-              <Link href="#">
-                <h2 className="font-noto-sans-bengali text-black font-medium">
-                  ফেনসিডিলসহ জনতার হাতে পুলিশ সদস্য আটক
+                  বাংলাদেশ ভ্রমণে নাগরিকদের সতর্ক করল ইসরায়েল
                 </h2>
               </Link>
 
@@ -127,8 +83,8 @@ const VideoShowSection = () => {
               </p>
             </div>
           </div>
-          <div className="border grid grid-rows-4 rounded-xl shadow-md border-black">
-            <div className="row-span-3">
+          <div className="border grid grid-rows-6 rounded-xl shadow-md border-black">
+            <div className="row-span-5">
               <iframe
                 className="p-4 w-full h-full"
                 src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
@@ -141,7 +97,53 @@ const VideoShowSection = () => {
             <div className="mt-1 row-span-1 ml-4">
               <Link href="#">
                 <h2 className="font-noto-sans-bengali text-black font-medium">
-                  খেলা দেখতে গিয়ে স্বর্ণের আইফোন হারালেন উর্বশী
+                  বাংলাদেশ ভ্রমণে নাগরিকদের সতর্ক করল ইসরায়েল
+                </h2>
+              </Link>
+
+              <p className="font-noto-sans-bengali text-black font-light text-sm">
+                ১৯ অক্টোবর ২০২৩
+              </p>
+            </div>
+          </div>
+          <div className="border grid grid-rows-6 rounded-xl shadow-md border-black">
+            <div className="row-span-5">
+              <iframe
+                className="p-4 w-full h-full"
+                src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="mt-1 row-span-1 ml-4">
+              <Link href="#">
+                <h2 className="font-noto-sans-bengali text-black font-medium">
+                  বাংলাদেশ ভ্রমণে নাগরিকদের সতর্ক করল ইসরায়েল
+                </h2>
+              </Link>
+
+              <p className="font-noto-sans-bengali text-black font-light text-sm">
+                ১৯ অক্টোবর ২০২৩
+              </p>
+            </div>
+          </div>
+          <div className="border grid grid-rows-6 rounded-xl shadow-md border-black">
+            <div className="row-span-5">
+              <iframe
+                className="p-4 w-full h-full"
+                src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="mt-1 row-span-1 ml-4">
+              <Link href="#">
+                <h2 className="font-noto-sans-bengali text-black font-medium">
+                  বাংলাদেশ ভ্রমণে নাগরিকদের সতর্ক করল ইসরায়েল
                 </h2>
               </Link>
 

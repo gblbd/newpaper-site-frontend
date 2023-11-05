@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import banner from "../../../assets/banner/image2.png";
-import sideimg1 from "../../../assets/banner/side1.png";
 import sideimg2 from "../../../assets/banner/side2.png";
 import sideimg3 from "../../../assets/banner/side3.png";
 const BannerRecentNews = () => {
@@ -36,7 +35,7 @@ const BannerRecentNews = () => {
           <div>
             <Image
               className="w-[400px] h-[174px]"
-              src={sideimg1}
+              src={sideimg2}
               alt="image"
             ></Image>
           </div>
