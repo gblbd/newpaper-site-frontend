@@ -21,24 +21,24 @@ const LeftPart = () => {
         </div>
 
         <div className="mt-4 border-2 border-gray-400">
-          <div className="grid grid-cols-7 gap-2 p-2">
-            <div className="w-full h-full col-span-3">
-              <Image src={side1} alt="image"></Image>
+          <div className="grid lg:grid-cols-7  gap-2 p-2">
+            <div className="w-full h-full lg:col-span-3 ">
+              <Image className="w-full h-full" src={side1} alt="image"></Image>
             </div>
-            <div className="col-span-4">
-              <p className="font-noto-sans-bengali text-black font-normal text-justify">
+            <div className="lg:col-span-4 ">
+              <p className="font-noto-sans-bengali text-black lg:font-normal sm:font-thin text-justify">
                 ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল
                 সফর করেছেন ...
               </p>
             </div>
           </div>
           <div className="h-1 border-b-[1px] border-black mt-2 mx-2"></div>
-          <div className="grid grid-cols-7 gap-2 p-2">
-            <div className="w-full h-full col-span-3">
-              <Image src={side3} alt="image"></Image>
+          <div className="grid lg:grid-cols-7  gap-2 p-2">
+            <div className="w-full h-full lg:col-span-3 ">
+              <Image className="w-full h-full" src={side2} alt="image"></Image>
             </div>
-            <div className="col-span-4">
-              <p className="font-noto-sans-bengali text-black font-normal text-justify">
+            <div className="lg:col-span-4 ">
+              <p className="font-noto-sans-bengali text-black lg:font-normal sm:font-thin text-justify">
                 ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল
                 সফর করেছেন ...
               </p>
@@ -46,12 +46,12 @@ const LeftPart = () => {
           </div>
 
           <div className="h-1 border-b-[1px] border-black mt-2  mx-2"></div>
-          <div className="grid grid-cols-7 gap-2 p-2">
-            <div className="w-full h-full col-span-3">
-              <Image src={side2} alt="image"></Image>
+          <div className="grid lg:grid-cols-7  gap-2 p-2">
+            <div className="w-full h-full lg:col-span-3 ">
+              <Image className="w-full h-full" src={side3} alt="image"></Image>
             </div>
-            <div className="col-span-4">
-              <p className="font-noto-sans-bengali text-black font-normal text-justify">
+            <div className="lg:col-span-4 ">
+              <p className="font-noto-sans-bengali text-black lg:font-normal sm:font-thin text-justify">
                 ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল
                 সফর করেছেন ...
               </p>
