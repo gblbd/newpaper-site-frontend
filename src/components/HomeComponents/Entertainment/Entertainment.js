@@ -51,15 +51,15 @@ const Entertainment = () => {
             </div>
 
             <div className="">
-              <div className="grid grid-cols-5 gap-4 mt-0">
-                <div className="col-span-2">
+              <div className="grid grid-cols-7 gap-4 mt-0">
+                <div className="col-span-3">
                   <Image
                     className="w-full mt-4"
                     src={sideimg1}
                     alt="image"
                   ></Image>
                 </div>
-                <div className="col-span-3 items-start mt-4">
+                <div className="col-span-4 items-start mt-4">
                   <Link href="#">
                     <h2 className="font-bold text-[20px]">
                       হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি এবং উপাদান
@@ -74,15 +74,15 @@ const Entertainment = () => {
 
               {/*  mew div */}
 
-              <div className="grid grid-cols-5 gap-4 gap-2 mt-0">
-                <div className="col-span-2">
+              <div className="grid grid-cols-7 gap-4  mt-0">
+                <div className="col-span-3">
                   <Image
                     className="w-full mt-4"
                     src={sideimg2}
                     alt="image"
                   ></Image>
                 </div>
-                <div className="col-span-3 items-start mt-4">
+                <div className="col-span-4 items-start mt-4">
                   <Link href="#">
                     <h2 className="font-bold text-[20px]">
                       ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
@@ -129,15 +129,15 @@ const Entertainment = () => {
             </div>
 
             <div className="mt-2">
-              <div className="grid grid-cols-5 gap-4 mt-0">
-                <div className="col-span-2">
+              <div className="grid grid-cols-7 gap-4 mt-0">
+                <div className="col-span-3">
                   <Image
                     className="w-full mt-4"
                     src={sideimg1}
                     alt="image"
                   ></Image>
                 </div>
-                <div className="col-span-3 items-start mt-4">
+                <div className="col-span-4 items-start mt-4">
                   <Link href="#">
                     <h2 className="font-bold text-[20px]">
                       হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি
@@ -151,15 +151,15 @@ const Entertainment = () => {
 
               {/*  mew div */}
 
-              <div className="grid grid-cols-5 gap-4 ">
-                <div className="col-span-2">
+              <div className="grid grid-cols-7 gap-4 ">
+                <div className="col-span-3">
                   <Image
                     className="w-full mt-4"
                     src={sideimg2}
                     alt="image"
                   ></Image>
                 </div>
-                <div className="col-span-3 items-start mt-4">
+                <div className="col-span-4 items-start mt-4">
                   <Link href="#">
                     <h2 className="font-bold text-[20px]">
                       ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস

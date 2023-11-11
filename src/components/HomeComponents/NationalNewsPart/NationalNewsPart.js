@@ -54,15 +54,15 @@ const NationalNewsPart = () => {
           </div>
           {/* side data */}
           <div className="">
-            <div className="grid grid-cols-3 gap-2 mt-0">
-              <div className="col-span-1">
+            <div className="grid grid-cols-5 gap-2 mt-0">
+              <div className="col-span-2">
                 <Image
                   className="w-full h-full"
                   src={sideimg1}
                   alt="image"
                 ></Image>
               </div>
-              <div className=" col-span-2 items-start mt-4">
+              <div className=" col-span-3 items-start mt-4">
                 <Link href="#">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
@@ -76,15 +76,15 @@ const NationalNewsPart = () => {
             <div className="h-1  border-b-[1px] border-black mt-4"></div>
 
             {/*  mew div */}
-            <div className="grid grid-cols-3 gap-2 mt-0">
-              <div className="col-span-1">
+            <div className="grid grid-cols-5 gap-2 mt-0">
+              <div className="col-span-2">
                 <Image
                   className="w-full h-full"
                   src={sideimg2}
                   alt="image"
                 ></Image>
               </div>
-              <div className=" col-span-2 items-start mt-4">
+              <div className=" col-span-3 items-start mt-4">
                 <Link href="#">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
@@ -99,15 +99,15 @@ const NationalNewsPart = () => {
             <div className="h-1 w-100 border-b-[1px] border-black mt-4"></div>
             {/*  mew div */}
 
-            <div className="grid grid-cols-3 gap-2 mt-0">
-              <div className="col-span-1">
+            <div className="grid grid-cols-5 gap-2 mt-0">
+              <div className="col-span-2">
                 <Image
                   className="w-full h-full"
                   src={sideimg3}
                   alt="image"
                 ></Image>
               </div>
-              <div className=" col-span-2 items-start mt-4">
+              <div className=" col-span-3 items-start mt-4">
                 <Link href="#">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
@@ -120,15 +120,15 @@ const NationalNewsPart = () => {
             </div>
             <div className="h-1 w-100 border-b-[1px] border-black mt-4"></div>
             {/*    new div */}
-            <div className="grid grid-cols-3 gap-2 mt-0">
-              <div className="col-span-1">
+            <div className="grid grid-cols-5 gap-2 mt-0">
+              <div className="col-span-2">
                 <Image
                   className="w-full h-full"
                   src={sideimg4}
                   alt="image"
                 ></Image>
               </div>
-              <div className=" col-span-2 items-start mt-4">
+              <div className=" col-span-3 items-start mt-4">
                 <Link href="#">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...

@@ -34,7 +34,7 @@ const BannerRecentNews = () => {
         <div className="flex gap-2 mt-0">
           <div>
             <Image
-              className="w-[400px] h-[174px]"
+              className="sm:w-[470px] sm:h-[174px] w-[900px] h-full"
               src={sideimg2}
               alt="image"
             ></Image>
@@ -66,7 +66,7 @@ const BannerRecentNews = () => {
         <div className="flex gap-2 mt-3">
           <div>
             <Image
-              className="w-[400px] h-[174px]"
+              className="sm:w-[470px] sm:h-[174px] w-[900px] h-full"
               src={sideimg3}
               alt="image"
             ></Image>
@@ -96,7 +96,7 @@ const BannerRecentNews = () => {
         <div className="flex gap-2 mt-3">
           <div>
             <Image
-              className="w-[400px] h-[174px]"
+              className="sm:w-[470px] sm:h-[174px] w-[900px] h-full"
               src={sideimg2}
               alt="image"
             ></Image>
