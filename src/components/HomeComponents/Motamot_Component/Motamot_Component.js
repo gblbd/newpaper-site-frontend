@@ -31,7 +31,7 @@ const Motamot_Component = () => {
                 </h5> */}
             </div>
             <div className=" px-1">
-              <Link href="#">
+              <Link href="/news-details">
                 <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                   সেরা বড় ঘর ধারনা | বাড়ির নকশা
                 </h2>
@@ -62,7 +62,7 @@ const Motamot_Component = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি এবং উপাদান
                     </h2>
@@ -85,7 +85,7 @@ const Motamot_Component = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
                     </h2>
@@ -109,7 +109,7 @@ const Motamot_Component = () => {
                 </h5> */}
             </div>
             <div className=" px-1">
-              <Link href="#">
+              <Link href="/news-details">
                 <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                   রেডিও বিজ্ঞাপন: ছোট ব্যবসা গাইড
                 </h2>
@@ -140,7 +140,7 @@ const Motamot_Component = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি
                     </h2>
@@ -162,7 +162,7 @@ const Motamot_Component = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
                     </h2>

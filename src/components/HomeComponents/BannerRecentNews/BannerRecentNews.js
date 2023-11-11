@@ -14,9 +14,11 @@ const BannerRecentNews = () => {
           </h5>
         </div>
         <div className=" px-1">
-          <h2 className="font-bold lg:text-[30px] text-[16px] font-noto-sans-bengali">
-            প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ শুরু
-          </h2>
+          <Link href="/news-details">
+            <h2 className="font-bold lg:text-[30px] text-[16px] font-noto-sans-bengali">
+              প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ শুরু
+            </h2>
+          </Link>
           <p className="font-medium lg:text-[20px] text-[14px] mb-4 font-noto-sans-bengali text-justify">
             ২০২৩ ওয়ানডে বিশ্বকাপে প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ শুরু
             পেয়েছিল বাংলাদেশ। কিন্তু পরের দুই ম্যাচে ইংল্যান্ড ও নিউজিল্যান্ডের
@@ -25,9 +27,11 @@ const BannerRecentNews = () => {
             ভারতকে চ্যালেঞ্জ জানাতে প্রস্তুত টাইগার শিবির।
           </p>
         </div>
-        <button type="button" className=" sm:m-4 m-4 hover:text-[#be5959]">
-          বিস্তারিত...
-        </button>
+        <Link href="/news-details">
+          <button type="button" className=" sm:m-4 m-4 hover:text-[#be5959]">
+            বিস্তারিত...
+          </button>
+        </Link>
       </div>
       {/* side data */}
       <div className="">
@@ -40,13 +44,13 @@ const BannerRecentNews = () => {
             ></Image>
           </div>
           <div className="w-100  items-start">
-            <Link href="#">
+            <Link href="/news-details">
               <h2 className="font-bold text-[20px] mt-7">
                 এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
               </h2>
             </Link>
 
-            <p className="font-normal text-[16px] font-sans font-noto-sans-bengali">
+            <p className="font-normal text-[16px]  font-noto-sans-bengali">
               ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল সফর
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
@@ -72,7 +76,7 @@ const BannerRecentNews = () => {
             ></Image>
           </div>
           <div className="w-100 items-center">
-            <Link href="#">
+            <Link href="/news-details#">
               <h2 className="font-bold text-[20px] mt-7">
                 এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
               </h2>
@@ -102,7 +106,7 @@ const BannerRecentNews = () => {
             ></Image>
           </div>
           <div className="w-100 items-center">
-            <Link href="#">
+            <Link href="/news-details">
               <h2 className="font-bold text-[20px] mt-7">
                 এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
               </h2>
@@ -112,12 +116,14 @@ const BannerRecentNews = () => {
               করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ
               ইসরায়েল সফর করেছেন...
             </p>
-            <button
-              type="button"
-              className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
-            >
-              বিস্তারিত...
-            </button>
+            <Link href="/news-details">
+              <button
+                type="button"
+                className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
+              >
+                বিস্তারিত...
+              </button>
+            </Link>
           </div>
         </div>
       </div>

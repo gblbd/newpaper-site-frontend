@@ -30,7 +30,7 @@ const WorldComponent = () => {
               </h5> */}
             </div>
             <div className=" px-1">
-              <Link href="#">
+              <Link href="/news-details">
                 <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                   2023 সালের সেরা সমসাময়িক ডিজাইন স্টাইল আইডিয়াস - ডেকোরিলা
                 </h2>
@@ -64,7 +64,7 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-3 items-start mt-4">
-                <Link href="#">
+                <Link href="/news-details">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                   </h2>
@@ -87,7 +87,7 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-3 items-start mt-4">
-                <Link href="#">
+                <Link href="/news-details">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                   </h2>
@@ -110,7 +110,7 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-3 items-start mt-4">
-                <Link href="#">
+                <Link href="/news-details">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                   </h2>
@@ -132,7 +132,7 @@ const WorldComponent = () => {
                 ></Image>
               </div>
               <div className=" col-span-3 items-start mt-4">
-                <Link href="#">
+                <Link href="/news-details">
                   <h2 className="font-bold text-[20px]">
                     ড্রয়িং রুম ইন্টেরিয়র ডিজাইন | ইন্টেরিয়র স্টুডিও এস...
                   </h2>

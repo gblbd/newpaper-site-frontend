@@ -29,7 +29,7 @@ const Entertainment = () => {
                 </h5> */}
             </div>
             <div className=" px-1">
-              <Link href="#">
+              <Link href="/news-details">
                 <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                   সেরা বড় ঘর ধারনা | বাড়ির নকশা
                 </h2>
@@ -60,7 +60,7 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি এবং উপাদান
                     </h2>
@@ -83,7 +83,7 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
                     </h2>
@@ -107,7 +107,7 @@ const Entertainment = () => {
                 </h5> */}
             </div>
             <div className=" px-1">
-              <Link href="">
+              <Link href="/news-details">
                 <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                   রেডিও বিজ্ঞাপন: ছোট ব্যবসা গাইড
                 </h2>
@@ -138,7 +138,7 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       হোম ইন্টেরিয়র ডিজাইনের মৌলিক নীতি
                     </h2>
@@ -160,7 +160,7 @@ const Entertainment = () => {
                   ></Image>
                 </div>
                 <div className="col-span-4 items-start mt-4">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[20px]">
                       ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
                     </h2>
@@ -214,7 +214,7 @@ const Entertainment = () => {
                   </button>
                 </div>
                 <div className="flex flex-col  items-start mt-8">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[15px] mb-2  font-noto-sans-bengali text-justify">
                       ভবিষ্যতের শহুরে রান্নাঘর
                     </h2>
@@ -238,7 +238,7 @@ const Entertainment = () => {
                   </button>
                 </div>
                 <div className="flex flex-col  items-start mt-8">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[15px] mb-2  font-noto-sans-bengali text-justify">
                       দাবার টেবিলের মেঝে এবং বড় গোলাকার সহ লাক্স হলওয়ে
                     </h2>
@@ -267,7 +267,7 @@ const Entertainment = () => {
                   </button>
                 </div>
                 <div className="flex flex-col items-start mt-8">
-                  <Link href="#">
+                  <Link href="/news-details">
                     <h2 className="font-bold text-[15px] mb-2 font-noto-sans-bengali text-justify">
                       পুরুষরা এখানে $50.00 পূরণ করতে অগ্রসর হয়
                     </h2>
