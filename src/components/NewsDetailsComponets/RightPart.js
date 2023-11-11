@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { useState } from "react";
-
+import add2 from "../../assets/details/add2.png";
 const RightPart = () => {
   const [activeTab, setActiveTab] = useState("first");
 
@@ -129,6 +130,11 @@ const RightPart = () => {
             সর্বশেষ বাংলা
           </button>
         </div>
+      </div>
+
+      {/*  image part */}
+      <div className="w-full h-full my-4">
+        <Image className="w-full h-full" src={add2} alt="image"></Image>
       </div>
     </div>
   );
