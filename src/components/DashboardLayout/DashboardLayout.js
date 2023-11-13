@@ -4,9 +4,17 @@ import Sidebar from "../Dashboard/Shared/Sidebar";
 const DashboardLayout = ({ children }) => {
   return (
     <>
-      <Navbar />
-      {children}
-      <Sidebar />
+      <div className="flex bg-[#EFF2F5] ">
+        {/* Sidebar (Fixed) */}
+        <div className="">
+          <Sidebar />
+        </div>
+
+        <div className="w-full">
+          <Navbar />
+          <div className="">{children}</div>
+        </div>
+      </div>
     </>
   );
 };

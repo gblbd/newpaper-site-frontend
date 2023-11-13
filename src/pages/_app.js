@@ -1,10 +1,11 @@
 // _app.js
 import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
 import "@/styles/globals.css";
+import { useRouter } from "next/router";
 
 function App({ Component, pageProps }) {
-  // Check if the current page is a dashboard page
-  const isDashboardPage = Component.name === "Dashboard";
+  const router = useRouter();
+  const isDashboardPage = router.pathname.startsWith("/dashboard");
 
   return isDashboardPage ? (
     <DashboardLayout>

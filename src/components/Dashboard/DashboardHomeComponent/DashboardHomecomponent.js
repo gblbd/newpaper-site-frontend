@@ -1,7 +1,7 @@
 const DashboardHomecomponent = () => {
   return (
     <div>
-      <p>home</p>
+      <p>home page</p>
     </div>
   );
 };
