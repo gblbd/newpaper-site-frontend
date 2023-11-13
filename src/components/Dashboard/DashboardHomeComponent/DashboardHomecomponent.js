@@ -1,7 +1,9 @@
+import Card from "./Card";
+
 const DashboardHomecomponent = () => {
   return (
     <div>
-      <p>home page</p>
+      <Card></Card>
     </div>
   );
 };
