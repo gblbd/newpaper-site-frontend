@@ -2,7 +2,7 @@ import { BiSolidUserPin } from "react-icons/bi";
 
 const Card = () => {
   return (
-    <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
+    <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
       <div className="bg-[#FC720D66] flex flex-col h-32 gap-4 m-3 p-4">
         <div>
           <h2 className="font-semibold text-lg uppercase">Total User</h2>

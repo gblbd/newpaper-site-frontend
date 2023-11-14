@@ -120,7 +120,7 @@ const Navbar = () => {
       </div>
 
       <div className="border-2 border-l-0 border-r-0 py-6">
-        <ul class="list-none lg:flex lg:gap-10 gap-2 justify-center grid ">
+        <ul className="list-none lg:flex lg:gap-10 gap-2 justify-center grid ">
           <div className="flex items-start gap-2 lg:gap-12  sm:gap-4 font-bold ">
             <li className="font-bold text-[20px] hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-green-500 before:absolute before:left-0 before:bottom-0">
               সর্বশেষ{" "}
