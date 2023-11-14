@@ -2,7 +2,9 @@ const index = () => {
   return (
     <div className="mt-10">
       <div class="bg-gray-100 mx-auto max-w-6xl  py-10 px-12 lg:px-24 shadow-xl mb-24">
-        <p className="text-center font-semibold uppercase my-2">Upload news</p>
+        <p className="text-center font-semibold uppercase my-2">
+          Upload video news
+        </p>
         <form>
           <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
             <div class="-mx-3 md:flex mb-6">
