@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import applicon1 from "../../../assets/header/app1.png";
 import applicon2 from "../../../assets/header/app2.png";
@@ -93,12 +94,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="">
-            <button
-              type="button"
+            <Link
+              href="/signin"
               className="lg:px-10 lg:py-2 rounded-xl lg:ml-4 px-6 py-3 hover:bg-[#010201] hover:text-white"
             >
               সাইন ইন
-            </button>
+            </Link>
             <button
               className="bg-[#066F30] text-white lg:px-10 lg:py-2 rounded-xl lg:ml-4 px-6 py-3 hover:bg-[#010201]"
               type="button"
