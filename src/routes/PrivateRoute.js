@@ -1,10 +1,18 @@
-// PrivateRoute.js
+// routes/PrivateRoute.js
 import useAuth from "@/hooks/useAuth";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const PrivateRoute = ({ children }) => {
   const { user, isLoading } = useAuth();
   const router = useRouter();
+
+  useEffect(() => {
+    // If user is not authenticated, redirect to login page
+    if (!isLoading && !user) {
+      router.push("/signin");
+    }
+  }, [isLoading, user, router]);
 
   if (isLoading) {
     return (
@@ -12,12 +20,6 @@ const PrivateRoute = ({ children }) => {
         <div className="spinner-border" role="status"></div>
       </div>
     );
-  }
-
-  // If user is not authenticated, redirect to login page
-  if (!user) {
-    router.push("/signin");
-    return null; // You can return a loading state here if needed
   }
 
   // If user is authenticated, render the children components

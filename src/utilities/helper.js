@@ -43,28 +43,39 @@ export const removeLocalStorage = (key) => {
   }
 };
 // authenticate user by passing data to cookie and localstorage during signin
-export const authenticate = (response, next) => {
-  console.log("AUTHENTICATE HELPER ON SIGNIN RESPONSE", response);
-  setCookie("token", response.token);
+// Example authenticate function
+export const authenticate = (response, callback) => {
+  // Save token to localStorage
+  setLocalStorage("token", response.token);
+
+  // Save user details to localStorage
   setLocalStorage("user", response.user);
-  next();
+
+  // Execute callback if provided
+  if (callback && typeof callback === "function") {
+    callback();
+  }
 };
+
 // access user info from localstorage
 // helper.js
+// helper.js
+
 export const isAuth = () => {
-  if (typeof window !== "undefined") {
-    if (getCookie("token")) {
-      const cookieChecked = getCookie("token");
-      if (cookieChecked && cookieChecked !== "undefined") {
-        if (
-          localStorage.getItem("user") &&
-          localStorage.getItem("user") !== "undefined"
-        ) {
-          return JSON.parse(localStorage.getItem("user"));
-        }
-      }
+  if (typeof window === "undefined") {
+    return false; // Return false for server-side rendering
+  }
+
+  const token = getCookie("token");
+
+  if (token) {
+    const userFromLocalStorage = localStorage.getItem("user");
+
+    if (userFromLocalStorage && userFromLocalStorage !== "undefined") {
+      return JSON.parse(userFromLocalStorage);
     }
   }
+
   return false;
 };
 
