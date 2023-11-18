@@ -1,5 +1,6 @@
 // _app.js
 import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
+import AuthProvider from "@/context/AuthProvider";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
 
@@ -9,7 +10,9 @@ function App({ Component, pageProps }) {
 
   return isDashboardPage ? (
     <DashboardLayout>
-      <Component {...pageProps} />
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
     </DashboardLayout>
   ) : (
     <Component {...pageProps} />
