@@ -40,13 +40,13 @@ const Sidebar = () => {
           <span className="mr-2">
             <FaClipboardList />
           </span>
-          <Link href="#"> News List</Link>
+          <Link href="/dashboard/news-list"> News List</Link>
         </div>
         <div className="flex my-2 text-center items-center text-xl text-white uppercase font-medium">
           <span className="mr-2">
             <PiVideoFill />
           </span>
-          <Link href="#"> Video List</Link>
+          <Link href="/dashboard/video-news-list"> Video List</Link>
         </div>
 
         <div className="flex my-2 text-center items-center text-xl text-white uppercase font-medium">
