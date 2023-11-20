@@ -28,7 +28,7 @@ const Sidebar = () => {
           <span className="mr-2">
             <FaFileUpload />
           </span>
-          <Link href="/dashboard/dashboard-upload-news"> upload news</Link>
+          <Link href="/dashboard/upload-news"> upload news</Link>
         </div>
         <div className="flex my-2 text-center items-center text-xl text-white uppercase font-medium">
           <span className="mr-2">

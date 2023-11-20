@@ -1,7 +1,17 @@
+import Image from "next/image";
+import { useState } from "react";
+import { DefaultEditor } from "react-simple-wysiwyg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useimg from "../../../assets/dashboard/user.png";
 const index = () => {
   const notify = () => toast("Wow so easy!");
+  const [value, setValue] = useState("");
+
+  /*  function onChange(e) {
+    e.preventDefault();
+    setValue(e.target.value);
+  } */
   return (
     <div className="mt-10">
       <ToastContainer />
@@ -15,7 +25,7 @@ const index = () => {
                   className="uppercase tracking-wide text-black text-xs font-bold mb-2"
                   htmlFor="company"
                 >
-                  Company Name*
+                  News Title
                 </label>
                 <input
                   className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"
@@ -23,50 +33,39 @@ const index = () => {
                   type="text"
                   placeholder="Tutsplus"
                 />
-                <div>
+                {/*     <div>
                   <span className="text-red-500 text-xs italic">
                     Please fill out this field.
                   </span>
-                </div>
+                </div> */}
               </div>
               <div className="md:w-1/2 px-3">
                 <label
                   className="uppercase tracking-wide text-black text-xs font-bold mb-2"
-                  htmlFor="title"
+                  htmlFor="location"
                 >
-                  Title*
+                  Categorey
                 </label>
-                <input
-                  className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"
-                  id="title"
-                  type="text"
-                  placeholder="Software Engineer"
-                />
+                <div>
+                  <select
+                    className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
+                    id="location"
+                  >
+                    <option>Abuja</option>
+                    <option>Enugu</option>
+                    <option>Lagos</option>
+                  </select>
+                </div>
               </div>
             </div>
-            <div className="-mx-3 md:flex mb-6">
-              <div className="md:w-full px-3">
-                <label
-                  className="uppercase tracking-wide text-black text-xs font-bold mb-2"
-                  htmlFor="application-link"
-                >
-                  Application Link*
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"
-                  id="application-link"
-                  type="text"
-                  placeholder="http://...."
-                />
-              </div>
-            </div>
+
             <div className="-mx-3 md:flex mb-2">
               <div className="md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
                   className="uppercase tracking-wide text-black text-xs font-bold mb-2"
                   htmlFor="location"
                 >
-                  Location*
+                  DIVISION
                 </label>
                 <div>
                   <select
@@ -84,7 +83,7 @@ const index = () => {
                   className="uppercase tracking-wide text-black text-xs font-bold mb-2"
                   htmlFor="job-type"
                 >
-                  Job Type*
+                  DISTRICT
                 </label>
                 <div>
                   <select
@@ -102,7 +101,7 @@ const index = () => {
                   className="uppercase tracking-wide text-black text-xs font-bold mb-2"
                   htmlFor="department"
                 >
-                  Department*
+                  UPAZILA
                 </label>
                 <div>
                   <select
@@ -114,6 +113,42 @@ const index = () => {
                     <option>Customer Support</option>
                   </select>
                 </div>
+              </div>
+            </div>
+            <div className="md:w-1/2 px-3">
+              <label
+                className="uppercase tracking-wide text-black text-xs font-bold mb-2"
+                htmlFor="location"
+              >
+                Upload Image
+              </label>
+              <div>
+                <div class="flex items-center">
+                  <Image
+                    src={useimg}
+                    alt="Avatar"
+                    class="w-16 h-16 rounded-full"
+                  />
+                  <input
+                    type="file"
+                    class="ml-4 p-1 w-full text-slate-500 text-sm rounded-full leading-6 file:bg-violet-200 file:text-violet-700 file:font-semibold file:border-none file:px-4 file:py-1 file:mr-6 file:rounded-full hover:file:bg-violet-100 border border-gray-300"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="-mx-3 md:flex mb-6">
+              <div className="md:w-full px-3 ">
+                <label
+                  className="uppercase tracking-wide text-black text-xs font-bold mb-2"
+                  htmlFor="application-link"
+                >
+                  Write News
+                </label>
+
+                <DefaultEditor
+                  value={value}
+                  containerProps={{ style: { height: "500px" } }}
+                ></DefaultEditor>
               </div>
             </div>
             <div className="-mx-3 md:flex mt-2">
