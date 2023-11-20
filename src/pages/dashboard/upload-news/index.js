@@ -19,25 +19,47 @@ const index = () => {
         <p className="text-center font-semibold uppercase my-2">Upload news</p>
         <form>
           <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
-            <div className="-mx-3 md:flex mb-6">
-              <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-                <label
-                  className="uppercase tracking-wide text-black text-xs font-bold mb-2"
-                  htmlFor="company"
-                >
-                  News Title
-                </label>
-                <input
-                  className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"
-                  id="company"
-                  type="text"
-                  placeholder="Tutsplus"
-                />
-                {/*     <div>
+            <div className="md:w-full px-3 mb-6 md:mb-0">
+              <label
+                className="uppercase tracking-wide text-black text-xs font-bold mb-2"
+                htmlFor="company"
+              >
+                News Title
+              </label>
+              <input
+                className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"
+                id="company"
+                type="text"
+                placeholder="Tutsplus"
+              />
+              {/*     <div>
                   <span className="text-red-500 text-xs italic">
                     Please fill out this field.
                   </span>
                 </div> */}
+            </div>
+
+            <div className="-mx-3 md:flex mb-6">
+              <div className="md:w-1/2 px-3">
+                <label
+                  className="uppercase tracking-wide text-black text-xs font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Upload Image
+                </label>
+                <div>
+                  <div class="flex items-center">
+                    <Image
+                      src={useimg}
+                      alt="Avatar"
+                      class="w-16 h-16 rounded-full"
+                    />
+                    <input
+                      type="file"
+                      class="ml-2 p-1 w-full text-slate-500 text-sm rounded-full leading-6 file:bg-violet-200 file:text-violet-700 file:font-semibold file:border-none file:px-4 file:py-1 file:mr-6 file:rounded-full hover:file:bg-violet-100 border border-gray-300"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="md:w-1/2 px-3">
                 <label
@@ -115,27 +137,7 @@ const index = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 px-3">
-              <label
-                className="uppercase tracking-wide text-black text-xs font-bold mb-2"
-                htmlFor="location"
-              >
-                Upload Image
-              </label>
-              <div>
-                <div class="flex items-center">
-                  <Image
-                    src={useimg}
-                    alt="Avatar"
-                    class="w-16 h-16 rounded-full"
-                  />
-                  <input
-                    type="file"
-                    class="ml-4 p-1 w-full text-slate-500 text-sm rounded-full leading-6 file:bg-violet-200 file:text-violet-700 file:font-semibold file:border-none file:px-4 file:py-1 file:mr-6 file:rounded-full hover:file:bg-violet-100 border border-gray-300"
-                  />
-                </div>
-              </div>
-            </div>
+
             <div className="-mx-3 md:flex mb-6">
               <div className="md:w-full px-3 ">
                 <label
