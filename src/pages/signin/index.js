@@ -5,11 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import loginimg from "../../assets/auth/57-2162-removebg-preview.png";
 const index = () => {
   const [loginData, setLoginData] = useState({});
-  const { user, setUser, isLoading, setIsLoading, setAuthError, authError } =
-    useContextData();
+  const {
+    user,
+    setUser,
+    isLoading,
+    setIsLoading,
+    setAuthError,
+    authError,
+    authSuccess,
+    setAuthSuccess,
+  } = useContextData();
   const handelOnChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -20,9 +30,11 @@ const index = () => {
   };
   const router = useRouter();
 
-  //login system by form submit
-  const [errorMessage, setErrorMessage] = useState("");
-  const [passwordAlert, setPasswordAllert] = useState("");
+  const showToastMessage = (err) => {
+    toast.error(err, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
 
   const handelLoginSubmit = (event) => {
     event.preventDefault();
@@ -30,32 +42,36 @@ const index = () => {
     const { email, password } = loginData;
     //password validation by condition
     if (password === undefined || email === undefined) {
-      setErrorMessage("please fill the form");
-    } else if (password.length < 8) {
-      setPasswordAllert("Password must be minimum 8 characters");
+      showToastMessage("please fill the form");
+      return;
+    }
+    if (password.length < 8) {
+      showToastMessage("Password must be minimum 8 characters");
+      return;
     }
 
     axios({
       method: "POST",
       url: `http://localhost:5001/api/signin`,
       data: { email, password },
-    }).then((response) => {
-      console.log("SIGNIN SUCCESS", response);
-      console.log(router);
-      /*   const destination = router?.query?.from || "/";
-        router.push(destination); */
-
-      authenticate(response.data, () => {
-        setUser(isAuth());
-        setIsLoading(false);
-        router.push("/dashboard");
-        console.log("cookie local save ", isAuth());
+    })
+      .then((response) => {
+        //console.log("SIGNIN SUCCESS", response);
+        authenticate(response.data, () => {
+          setUser(isAuth());
+          setIsLoading(false);
+          router.push("/dashboard");
+          //console.log("cookie local save ", isAuth());
+        });
+      })
+      .catch((err) => {
+        showToastMessage(err.response.data.error);
       });
-    });
   };
 
   return (
     <div>
+      <ToastContainer />
       <div class="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div class="flex flex-col justify-between">
           <div>

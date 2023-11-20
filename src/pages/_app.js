@@ -4,19 +4,19 @@ import AuthProvider from "@/context/AuthProvider";
 import PrivateRoute from "@/routes/PrivateRoute";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
-
+import "react-toastify/dist/ReactToastify.css";
 function App({ Component, pageProps }) {
   const router = useRouter();
   const isDashboardPage = router.pathname.startsWith("/dashboard");
 
   return isDashboardPage ? (
-    <DashboardLayout>
-      <AuthProvider>
-        <PrivateRoute>
+    <AuthProvider>
+      <PrivateRoute>
+        <DashboardLayout>
           <Component {...pageProps} />
-        </PrivateRoute>
-      </AuthProvider>
-    </DashboardLayout>
+        </DashboardLayout>
+      </PrivateRoute>
+    </AuthProvider>
   ) : (
     <Component {...pageProps} />
   );

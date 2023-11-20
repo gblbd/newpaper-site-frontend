@@ -1,6 +1,10 @@
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const index = () => {
+  const notify = () => toast("Wow so easy!");
   return (
     <div className="mt-10">
+      <ToastContainer />
       <div className="bg-gray-100 mx-auto max-w-6xl  py-10 px-12 lg:px-24 shadow-xl mb-24">
         <p className="text-center font-semibold uppercase my-2">Upload news</p>
         <form>
