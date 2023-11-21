@@ -52,7 +52,7 @@ const index = () => {
 
     axios({
       method: "POST",
-      url: `http://localhost:5001/api/signin`,
+      url: `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/signin`,
       data: { email, password },
     })
       .then((response) => {

@@ -35,7 +35,7 @@ const index = () => {
   //get categoreies  ${process.env.REACT_APP_API}
   const [categoreyList, setCategoreyList] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5001/api/categorey-data-list`, {
+    fetch(`${process.env.NEXT_PUBLIC_REACT_APP_API}/api/categorey-data-list`, {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -53,7 +53,7 @@ const index = () => {
 
       // Fetch the latest category list from the server
       const response = await fetch(
-        `http://localhost:5001/api/categorey-data-list`,
+        `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/categorey-data-list`,
         {
           method: "GET",
           headers: {
@@ -73,7 +73,7 @@ const index = () => {
       console.error("Error:", error);
     }
   };
-  console.log("categoreyList", categoreyList);
+
   //division district
   const { user, setUser, isLoading } = useAuth();
   const [title, setTitle] = useState("");
@@ -153,20 +153,7 @@ const index = () => {
   };
 
   //division district  end........................................
-  /* const convertBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
 
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
-
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  }; */
   const [imgData, setImgData] = useState(null);
   const [previewSrc, setPreviewSrc] = useState([]);
   const handleImageChange = (e) => {
@@ -199,10 +186,10 @@ const index = () => {
       newsDetailsText: newsDetailsText,
       newsImage: previewSrc[0],
     };
-    console.log("xpostData", postData);
+
     try {
       const response = await axios.post(
-        "http://localhost:5001/api/upload-news-data",
+        `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/upload-news-data`,
         postData,
         {
           headers: {
@@ -223,7 +210,7 @@ const index = () => {
       console.error("Error:", error);
     }
   };
-  console.log("categoreyName", categoreyName);
+
   return (
     <div className="mt-10">
       <ToastContainer />

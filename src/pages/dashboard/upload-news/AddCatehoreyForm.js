@@ -22,7 +22,7 @@ const AddCatehoreyForm = ({ isOpen, onClose, onAddCategory }) => {
   const postData = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5001/api/categorey-upload",
+        `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/categorey-upload`,
         { categoreyName: data },
         {
           headers: {

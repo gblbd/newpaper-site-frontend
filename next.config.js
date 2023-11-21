@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    NEXT_PUBLIC_REACT_APP_API: process.env.NEXT_PUBLIC_REACT_APP_API,
+  },
 };
 
 module.exports = nextConfig;
