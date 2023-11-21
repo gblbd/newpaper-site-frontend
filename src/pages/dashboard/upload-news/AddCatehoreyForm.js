@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { getCookie } from "../../../utilities/helper.js";
-const AddCatehoreyForm = ({ isOpen, onClose, children }) => {
+const AddCatehoreyForm = ({ isOpen, onClose, onAddCategory }) => {
   const modalClass = isOpen
     ? "fixed z-10 overflow-y-auto top-0 w-full left-0"
     : "hidden";
@@ -36,6 +36,7 @@ const AddCatehoreyForm = ({ isOpen, onClose, children }) => {
       if (response.status === 200) {
         onClose();
         showToastErrotMessage("success");
+        onAddCategory(data);
         setData("");
       } else {
         showToastErrotMessage("error");

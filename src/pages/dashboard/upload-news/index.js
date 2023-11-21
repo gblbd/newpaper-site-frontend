@@ -1,18 +1,15 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DefaultEditor } from "react-simple-wysiwyg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useimg from "../../../assets/dashboard/user.png";
+import { getCookie } from "../../../utilities/helper.js";
 import AddCatehoreyForm from "./AddCatehoreyForm";
 const index = () => {
   const notify = () => toast("Wow so easy!");
   const [value, setValue] = useState("");
 
-  /*  function onChange(e) {
-    e.preventDefault();
-    setValue(e.target.value);
-  } */
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -22,7 +19,85 @@ const index = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  console.log("value", value);
+  //get categoreies  ${process.env.REACT_APP_API}
+  const [categoreyList, setCategoreyList] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5001/api/categorey-data-list`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Authorization: `Bearer ${getCookie("token")}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setCategoreyList(data));
+  }, []);
 
+  const addCategoryToList = async (newCategory) => {
+    try {
+      // Update the category list when a new category is added
+      setCategoreyList((prevCategories) => [...prevCategories, newCategory]);
+
+      // Fetch the latest category list from the server
+      const response = await fetch(
+        `http://localhost:5001/api/categorey-data-list`,
+        {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            Authorization: `Bearer ${getCookie("token")}`,
+          },
+        }
+      );
+
+      if (response.ok) {
+        const updatedCategoryList = await response.json();
+        setCategoreyList(updatedCategoryList);
+      } else {
+        console.error("Failed to fetch updated category list");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  console.log("categoreyList", categoreyList);
+  const [formData, setFormData] = useState([]);
+  const getValue = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newData = { ...formData };
+    newData[field] = value;
+
+    setFormData(newData);
+  };
+
+  const postData = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5001/api/categorey-upload",
+        { categoreyName: data },
+        {
+          headers: {
+            "Content-Type": "application/json",
+
+            Authorization: `Bearer ${getCookie("token")}`,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        onClose();
+        showToastErrotMessage("success");
+        setData("");
+      } else {
+        showToastErrotMessage("error");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
   return (
     <div className="mt-10">
       <ToastContainer />
@@ -37,6 +112,7 @@ const index = () => {
         <AddCatehoreyForm
           isOpen={isModalOpen}
           onClose={closeModal}
+          onAddCategory={addCategoryToList}
         ></AddCatehoreyForm>
         <form>
           <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
@@ -51,6 +127,8 @@ const index = () => {
                 className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3"
                 id="company"
                 type="text"
+                name="newsTitle"
+                onChange={getValue}
                 placeholder="Tutsplus"
               />
               {/*     <div>
@@ -73,6 +151,7 @@ const index = () => {
                     <Image
                       src={useimg}
                       alt="Avatar"
+                      name="newsImage"
                       class="w-16 h-16 rounded-full"
                     />
                     <input
@@ -94,9 +173,9 @@ const index = () => {
                     className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
                     id="location"
                   >
-                    <option>Abuja</option>
-                    <option>Enugu</option>
-                    <option>Lagos</option>
+                    {categoreyList.map((name) => (
+                      <option key={name._id}>{name.categoreyName}</option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -114,6 +193,7 @@ const index = () => {
                   <select
                     className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
                     id="location"
+                    name="divisionName"
                   >
                     <option>Abuja</option>
                     <option>Enugu</option>
@@ -132,6 +212,7 @@ const index = () => {
                   <select
                     className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
                     id="job-type"
+                    name="districtName"
                   >
                     <option>Full-Time</option>
                     <option>Part-Time</option>
@@ -150,6 +231,7 @@ const index = () => {
                   <select
                     className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
                     id="department"
+                    name="upazilaName"
                   >
                     <option>Engineering</option>
                     <option>Design</option>
@@ -170,6 +252,7 @@ const index = () => {
 
                 <DefaultEditor
                   value={value}
+                  name="newsDetailsText"
                   containerProps={{ style: { height: "500px" } }}
                 ></DefaultEditor>
               </div>
