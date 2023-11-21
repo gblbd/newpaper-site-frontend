@@ -1,4 +1,7 @@
+import useAuth from "@/hooks/useAuth";
+import axios from "axios";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { DefaultEditor } from "react-simple-wysiwyg";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,7 +10,17 @@ import useimg from "../../../assets/dashboard/user.png";
 import { getCookie } from "../../../utilities/helper.js";
 import AddCatehoreyForm from "./AddCatehoreyForm";
 const index = () => {
-  const notify = () => toast("Wow so easy!");
+  const showToastMessage = (sms) => {
+    if (sms === "success") {
+      toast.success("uploaded success", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    } else {
+      toast.error("something went wrong", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -60,9 +73,11 @@ const index = () => {
       console.error("Error:", error);
     }
   };
-
+  console.log("categoreyList", categoreyList);
   //division district
+  const { user, setUser, isLoading } = useAuth();
   const [title, setTitle] = useState("");
+  const [newsDetailsText, setNewsDetailsText] = useState("");
   const [categoreyName, setCategoreyName] = useState("");
   const [data, setData] = useState([]);
   const [divisions, setDivisions] = useState([]);
@@ -170,21 +185,45 @@ const index = () => {
     }
   };
 
-  console.log("imgData:", imgData);
-  console.log("previewSrc:", previewSrc);
-
-  const submitDataForm = (e) => {
+  const router = useRouter();
+  const submitDataForm = async (e) => {
     e.preventDefault();
     const postData = {
+      userId: user._id,
+      categoreyId: categoreyName,
       newsTitle: title,
       categoreyName: categoreyName,
       divisionName: selectedDivision,
       districtName: selectedDistrict,
       upazilaName: selectedUpazila,
-      newsImage: previewSrc,
+      newsDetailsText: newsDetailsText,
+      newsImage: previewSrc[0],
     };
     console.log("xpostData", postData);
+    try {
+      const response = await axios.post(
+        "http://localhost:5001/api/upload-news-data",
+        postData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+
+            Authorization: `Bearer ${getCookie("token")}`,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        showToastMessage("success");
+        router.push("/dashboard/news-list");
+      } else {
+        showToastMessage("error");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
+  console.log("categoreyName", categoreyName);
   return (
     <div className="mt-10">
       <ToastContainer />
@@ -273,10 +312,10 @@ const index = () => {
                     className="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded"
                     id="location"
                     name="categoreyName"
-                    onChange={(e) => e.target.value}
+                    onChange={(e) => setCategoreyName(e.target.value)}
                   >
                     {categoreyList.map((name) => (
-                      <option key={name._id} value={name.categoreyName}>
+                      <option key={name._id} value={name._id}>
                         {name.categoreyName}
                       </option>
                     ))}
@@ -370,6 +409,8 @@ const index = () => {
                 </label>
 
                 <DefaultEditor
+                  value={newsDetailsText}
+                  onChange={(e) => setNewsDetailsText(e.target.value)}
                   name="newsDetailsText"
                   containerProps={{ style: { height: "500px" } }}
                 ></DefaultEditor>
