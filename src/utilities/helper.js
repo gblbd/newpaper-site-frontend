@@ -17,7 +17,7 @@ export const removeCookie = (key) => {
   }
 };
 // get from cookie such as stored token
-// will be useful when we need to make request to server with token
+// will be useful when we need to make redquest to server with token
 export const getCookie = (key) => {
   if (typeof window !== "undefined") {
     return cookie.get(key);

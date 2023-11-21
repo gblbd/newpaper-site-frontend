@@ -4,6 +4,7 @@ import { DefaultEditor } from "react-simple-wysiwyg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useimg from "../../../assets/dashboard/user.png";
+import AddCatehoreyForm from "./AddCatehoreyForm";
 const index = () => {
   const notify = () => toast("Wow so easy!");
   const [value, setValue] = useState("");
@@ -12,11 +13,31 @@ const index = () => {
     e.preventDefault();
     setValue(e.target.value);
   } */
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="mt-10">
       <ToastContainer />
       <div className="bg-gray-100 mx-auto max-w-6xl  py-10 px-12 lg:px-24 shadow-xl mb-24">
         <p className="text-center font-semibold uppercase my-2">Upload news</p>
+        <button
+          onClick={openModal}
+          className="text-right right-0 p-4 bg-black text-white mb-2"
+        >
+          Add Catgorey
+        </button>
+        <AddCatehoreyForm
+          isOpen={isModalOpen}
+          onClose={closeModal}
+        ></AddCatehoreyForm>
         <form>
           <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
             <div className="md:w-full px-3 mb-6 md:mb-0">
@@ -40,7 +61,7 @@ const index = () => {
             </div>
 
             <div className="-mx-3 md:flex mb-6">
-              <div className="md:w-1/2 px-3">
+              <div className="md:w-1/2 px-3 ">
                 <label
                   className="uppercase tracking-wide text-black text-xs font-bold mb-2"
                   htmlFor="location"

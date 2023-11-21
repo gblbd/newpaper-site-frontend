@@ -4,6 +4,7 @@ import AuthProvider from "@/context/AuthProvider";
 import PrivateRoute from "@/routes/PrivateRoute";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App({ Component, pageProps }) {
   const router = useRouter();
@@ -13,6 +14,7 @@ function App({ Component, pageProps }) {
     <AuthProvider>
       <PrivateRoute>
         <DashboardLayout>
+          <ToastContainer />
           <Component {...pageProps} />
         </DashboardLayout>
       </PrivateRoute>
