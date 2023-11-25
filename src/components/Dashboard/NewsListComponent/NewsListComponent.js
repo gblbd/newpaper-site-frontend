@@ -21,7 +21,7 @@ const NewsListComponent = () => {
       .then((response) => response.json())
       .then((data) => setListNews(data));
   }, []);
-  console.log("vvv", newsList);
+
   function formatBanglaDate(dateString) {
     const options = {
       year: "numeric",
