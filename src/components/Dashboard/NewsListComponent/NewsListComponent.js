@@ -1,5 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { GiSightDisabled } from "react-icons/gi";
@@ -200,14 +201,20 @@ const NewsListComponent = () => {
                                   <GiSightDisabled />
                                 </button>
                               )}
-                              <span className="relative font-bold text-3xl text-green-600">
+                              <Link
+                                href={`/dashboard/edit-news/${data._id}`}
+                                className="relative font-bold text-3xl text-green-600"
+                              >
                                 <FaEdit />
-                              </span>
+                              </Link>
                             </>
                           ) : (
-                            <span className="relative font-bold text-3xl text-green-600">
+                            <Link
+                              href={`/dashboard/news-edit/${data._id}`}
+                              className="relative font-bold text-3xl text-green-600"
+                            >
                               <FaEdit />
-                            </span>
+                            </Link>
                           )}
                         </span>
                       </td>
