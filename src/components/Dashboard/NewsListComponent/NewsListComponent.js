@@ -1,13 +1,17 @@
+import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { GiSightDisabled } from "react-icons/gi";
 import { MdOutlineDeleteOutline } from "react-icons/md";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import useAuth from "../../../hooks/useAuth";
 import { getCookie } from "../../../utilities/helper.js";
-
 // Function to make the GET request with JWT token
 
 const NewsListComponent = () => {
+  const { user, setUser, isLoading, setIsLoading } = useAuth();
   const [newsList, setListNews] = useState([]);
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_REACT_APP_API}/api/all-new-country-list`, {
@@ -41,7 +45,29 @@ const NewsListComponent = () => {
   const formattedDate = formatBanglaDate(originalDate);
 
   console.log(formattedDate); // Output: ১৫ নভেম্বর ২০২৩ */
-
+  /* delete news */
+  const handelDelete = (id) => {
+    axios
+      .delete(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/news-data-delete/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${getCookie("token")}`,
+          },
+          data: {
+            userId: user?._id,
+          },
+        }
+      )
+      .then((res) => {
+        const posts = newsList.finalResult.filter((item) => item._id !== id);
+        setListNews(posts);
+        toast.success(res.data.message);
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message);
+      });
+  };
   return (
     <div>
       <div className="container mx-auto px-4 sm:px-8">
@@ -99,9 +125,12 @@ const NewsListComponent = () => {
                             aria-hidden
                             className="absolute inset-0  opacity-50 rounded-full"
                           ></span>
-                          <span className="relative font-bold text-3xl text-red-600">
+                          <button
+                            onClick={() => handelDelete(data._id)}
+                            class="relative font-bold text-3xl text-red-600"
+                          >
                             <MdOutlineDeleteOutline />
-                          </span>
+                          </button>
                           <span className="relative font-bold text-3xl text-green-600">
                             <FaEdit />
                           </span>

@@ -1,10 +1,26 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { GiSightDisabled } from "react-icons/gi";
 import { MdOutlineDeleteOutline } from "react-icons/md";
-import { getCookie } from "../../../utilities/helper";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import useAuth from "../../../hooks/useAuth";
+import { getCookie } from "../../../utilities/helper.js";
 const VideoListComponent = () => {
+  const showToastMessage = (sms) => {
+    if (sms === "success") {
+      toast.success("Deleted successfully", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    } else {
+      toast.error("something went wrong", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  };
   const [newsList, setListNews] = useState([]);
+  const { user, setUser, isLoading, setIsLoading } = useAuth();
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_REACT_APP_API}/api/news-video-data-list`, {
       method: "GET",
@@ -17,7 +33,7 @@ const VideoListComponent = () => {
       .then((response) => response.json())
       .then((data) => setListNews(data));
   }, []);
-  console.log("vvv", newsList);
+  console.log("vvv", user);
   function formatBanglaDate(dateString) {
     const options = {
       year: "numeric",
@@ -32,6 +48,29 @@ const VideoListComponent = () => {
 
     return formattedDate;
   }
+
+  const handelDelete = (id) => {
+    axios
+      .delete(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/news-video-delete/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${getCookie("token")}`,
+          },
+          data: {
+            userId: user?._id,
+          },
+        }
+      )
+      .then((res) => {
+        const posts = newsList.filter((item) => item._id !== id);
+        setListNews(posts);
+        toast.success(res.data.message);
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message);
+      });
+  };
 
   return (
     <div>
@@ -93,9 +132,12 @@ const VideoListComponent = () => {
                             aria-hidden
                             class="absolute inset-0  opacity-50 rounded-full"
                           ></span>
-                          <span class="relative font-bold text-3xl text-red-600">
+                          <button
+                            onClick={() => handelDelete(data._id)}
+                            class="relative font-bold text-3xl text-red-600"
+                          >
                             <MdOutlineDeleteOutline />
-                          </span>
+                          </button>
                           <span class="relative font-bold text-3xl text-green-600">
                             <FaEdit />
                           </span>
