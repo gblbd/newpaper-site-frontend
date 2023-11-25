@@ -22,14 +22,17 @@ const VideoListComponent = () => {
   const [newsList, setListNews] = useState([]);
   const { user, setUser, isLoading, setIsLoading } = useAuth();
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_REACT_APP_API}/api/news-video-data-list`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${getCookie("token")}`,
-        "Content-Type": "application/json",
-        // Add other headers if needed
-      },
-    })
+    fetch(
+      `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/news-video-data-list-admin`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${getCookie("token")}`,
+          "Content-Type": "application/json",
+          // Add other headers if needed
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => setListNews(data));
   }, []);
@@ -71,7 +74,54 @@ const VideoListComponent = () => {
         toast.error(error.response.data.message);
       });
   };
-
+  const handelAcceptNews = (id) => {
+    setIsLoading(true);
+    axios
+      .patch(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/accept-news-video-publish/${id}`,
+        {
+          // Request body data goes here if needed
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${getCookie("token")}`,
+          },
+        }
+      )
+      .then((res) => {
+        // const posts = newsList.finalResult.filter((item) => item._id !== id);
+        // setListNews(posts);
+        setIsLoading(false);
+        toast.success(res.data.message);
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message);
+      });
+  };
+  const handelDisabletNews = (id) => {
+    setIsLoading(true);
+    axios
+      .patch(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/disable-news-video/${id}`,
+        {
+          // Request body data goes here if needed
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${getCookie("token")}`,
+          },
+        }
+      )
+      .then((res) => {
+        // const posts = newsList.finalResult.filter((item) => item._id !== id);
+        // setListNews(posts);
+        setIsLoading(false);
+        toast.success(res.data.message);
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message);
+      });
+  };
   return (
     <div>
       <div class="container mx-auto px-4 sm:px-8">
@@ -132,18 +182,38 @@ const VideoListComponent = () => {
                             aria-hidden
                             class="absolute inset-0  opacity-50 rounded-full"
                           ></span>
-                          <button
-                            onClick={() => handelDelete(data._id)}
-                            class="relative font-bold text-3xl text-red-600"
-                          >
-                            <MdOutlineDeleteOutline />
-                          </button>
-                          <span class="relative font-bold text-3xl text-green-600">
-                            <FaEdit />
-                          </span>
-                          <span class="relative font-bold text-3xl text-gray-600">
-                            <GiSightDisabled />
-                          </span>
+                          {user.role === "super-admin" ? (
+                            <>
+                              <button
+                                onClick={() => handelDelete(data._id)}
+                                class="relative font-bold text-3xl text-red-600"
+                              >
+                                <MdOutlineDeleteOutline />
+                              </button>
+                              <span class="relative font-bold text-3xl text-green-600">
+                                <FaEdit />
+                              </span>
+                              {data.isPublished === true ? (
+                                <button
+                                  onClick={() => handelDisabletNews(data._id)}
+                                  className="relative font-bold text-3xl text-green-600"
+                                >
+                                  <GiSightDisabled />
+                                </button>
+                              ) : (
+                                <button
+                                  onClick={() => handelAcceptNews(data._id)}
+                                  className="relative font-bold text-3xl text-gray-600"
+                                >
+                                  <GiSightDisabled />
+                                </button>
+                              )}
+                            </>
+                          ) : (
+                            <span class="relative font-bold text-3xl text-gray-600">
+                              <GiSightDisabled />
+                            </span>
+                          )}
                         </span>
                       </td>
                     </tr>

@@ -301,6 +301,7 @@ const index = () => {
                     name="categoreyName"
                     onChange={(e) => setCategoreyName(e.target.value)}
                   >
+                    <option>select categorey</option>
                     {categoreyList.map((name) => (
                       <option key={name._id} value={name._id}>
                         {name.categoreyName}
