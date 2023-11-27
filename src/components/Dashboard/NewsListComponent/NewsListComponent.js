@@ -51,6 +51,7 @@ const NewsListComponent = () => {
   console.log(formattedDate); // Output: ১৫ নভেম্বর ২০২৩ */
   /* delete news */
   const handelDelete = (id) => {
+    setIsLoading(true);
     axios
       .delete(
         `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/news-data-delete/${id}`,
@@ -64,8 +65,12 @@ const NewsListComponent = () => {
         }
       )
       .then((res) => {
+        setIsLoading(false);
+        console.log(res);
+
         const posts = newsList.finalResult.filter((item) => item._id !== id);
         setListNews(posts);
+
         toast.success(res.data.message);
       })
       .catch((error) => {

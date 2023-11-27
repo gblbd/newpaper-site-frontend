@@ -11,12 +11,12 @@ import WorldComponent from "@/components/HomeComponents/WorldComponent/WorldComp
 import PoliticsNews from "@/components/HomeComponents/politcisNews/PoliticsNews";
 import Navbar from "@/components/Shared/Navbar/Navbar";
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
   return (
     <div>
       <Navbar></Navbar>
       <div className="max-w-7xl mx-auto">
-        <BannerRecentNews></BannerRecentNews>
+        <BannerRecentNews data={data}></BannerRecentNews>
         <Advertise></Advertise>
         <NationalNewsPart></NationalNewsPart>
         <WorldComponent></WorldComponent>

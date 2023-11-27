@@ -1,12 +1,23 @@
 import { Inter } from "next/font/google";
-import HomePage from "./HomePage";
+import HomePage from "./homepage";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export const getServerSideProps = async () => {
+  const res = await fetch("http://localhost:5001/api/all-recent-news-list");
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+export default function Home({ data }) {
   return (
     <main>
-      <HomePage></HomePage>
+      <HomePage data={data}></HomePage>
     </main>
   );
 }

@@ -1,4 +1,5 @@
 // _app.js
+
 import DashboardLayout from "@/components/DashboardLayout/DashboardLayout";
 import AuthProvider from "@/context/AuthProvider";
 import PrivateRoute from "@/routes/PrivateRoute";

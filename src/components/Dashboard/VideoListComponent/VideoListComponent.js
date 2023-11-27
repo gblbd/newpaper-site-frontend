@@ -158,9 +158,9 @@ const VideoListComponent = () => {
                               className="w-full h-full"
                               src={data.newsVideoUrl}
                               title="YouTube video player"
-                              frameborder="0"
+                              frameBorder="0"
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowfullscreen
+                              allowFullscreen
                             ></iframe>
                           </div>
                           <div class="ml-3">

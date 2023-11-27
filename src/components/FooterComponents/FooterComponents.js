@@ -94,9 +94,9 @@ const FooterComponents = () => {
                     className="w-full h-full"
                     src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
                     title="YouTube video player"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </div>
@@ -118,9 +118,9 @@ const FooterComponents = () => {
                     className="w-full h-full"
                     src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
                     title="YouTube video player"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </div>
@@ -146,9 +146,9 @@ const FooterComponents = () => {
                     className="w-full h-full"
                     src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
                     title="YouTube video player"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </div>

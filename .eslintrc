@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    // ...
+    "react-hooks"
+  ],
+
+  "rules": {
+    "react-hooks/rules-of-hooks": "off",
+    "no-unused-vars": "off",
+    "no-undef": "off"
+  }
+}
