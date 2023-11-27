@@ -19,22 +19,21 @@ const BannerRecentNews = ({ data }) => {
             alt="img"
           ></Image>
           <h5 className="text-center lg:text-[18px] text-[12px]">
-            ভারতের বিপক্ষে মাঠে নামছে বাংলাদেশ। ছবি : সংগৃহীত
+            {mainNews.newsTitle} ছবি : সংগৃহীত
           </h5>
         </div>
         <div className=" px-1">
           <Link href="/news-details">
-            <h2 className="font-bold lg:text-[30px] text-[16px] font-noto-sans-bengali">
+            <h2 className="font-bold lg:text-[30px] text-[16px] font-noto-sans-bengali mt-6 mb-4">
               {mainNews.newsTitle}
             </h2>
           </Link>
-          <p className="font-medium lg:text-[20px] text-[14px] mb-4 font-noto-sans-bengali text-justify">
-            ২০২৩ ওয়ানডে বিশ্বকাপে প্রথম ম্যাচে আফগানিস্তানকে উড়িয়ে দারুণ শুরু
-            পেয়েছিল বাংলাদেশ। কিন্তু পরের দুই ম্যাচে ইংল্যান্ড ও নিউজিল্যান্ডের
-            কাছে ধরাশায়ী হয় টাইগাররা। টানা দুই পরাজয়ের পর ঘুরে দাঁড়ানোর লক্ষ্যে
-            মাঠে নামতে যাচ্ছে হাথুরুসিংহের শিষ্যরা। টানা তিন জয় পাওয়া স্বাগতিক
-            ভারতকে চ্যালেঞ্জ জানাতে প্রস্তুত টাইগার শিবির।
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: mainNews.newsDetailsText.slice(0, 300),
+            }}
+            className="font-medium lg:text-[20px] text-[14px] mb-4 font-noto-sans-bengali text-justify"
+          ></p>
         </div>
         <Link href="/news-details">
           <button type="button" className=" sm:m-4 m-4 hover:text-[#be5959]">
@@ -59,15 +58,16 @@ const BannerRecentNews = ({ data }) => {
               <div className="w-100  items-start">
                 <Link href="/news-details">
                   <h2 className="font-bold text-[20px] mt-7">
-                    এবার ইসরায়েল যাচ্ছেন ব্রিটিশ প্রধানমন্ত্রী
+                    {news.newsTitle}
                   </h2>
                 </Link>
 
-                <p className="font-normal text-[16px]  font-noto-sans-bengali">
-                  ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই মিত্রদেশ ইসরায়েল
-                  সফর করেছেন ইসরায়েল ও ফিলিস্তিনের যুদ্ধ চলমান। এর মধ্যেই
-                  মিত্রদেশ ইসরায়েল সফর করেছেন...
-                </p>
+                <p
+                  className="font-normal text-[16px]  font-noto-sans-bengali"
+                  dangerouslySetInnerHTML={{
+                    __html: news.newsDetailsText.slice(0, 100),
+                  }}
+                ></p>
                 <button
                   type="button"
                   className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
