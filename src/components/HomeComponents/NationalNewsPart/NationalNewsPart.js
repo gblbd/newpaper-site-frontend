@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 const NationalNewsPart = ({ dataByCategory }) => {
-  console.log("dataByCategory", dataByCategory);
-
   const [isClient, setIsClient] = useState(false);
   const [mainNews, setMainNews] = useState("");
   const [sompadokNews, setSompadokNews] = useState("");
@@ -22,7 +20,7 @@ const NationalNewsPart = ({ dataByCategory }) => {
       let sompadokNewsData = dataByCategory.find(
         (data) => data.categoreyName === "সম্পাদকীয়"
       );
-      console.log("sompadok>>>", sompadokNewsData);
+
       if (sompadokNewsData.newsArray.length === null) {
         return "";
       } else {
@@ -30,7 +28,7 @@ const NationalNewsPart = ({ dataByCategory }) => {
       }
     }
   }, []);
-  console.log("sompadokNews", sompadokNews);
+
   function formatBanglaDate(dateString) {
     const options = {
       year: "numeric",

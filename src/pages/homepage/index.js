@@ -19,12 +19,12 @@ const HomePage = ({ data, dataByCategory }) => {
         <BannerRecentNews data={data}></BannerRecentNews>
         <Advertise></Advertise>
         <NationalNewsPart dataByCategory={dataByCategory}></NationalNewsPart>
-        <WorldComponent></WorldComponent>
-        <PoliticsNews></PoliticsNews>
-        <TotalCountry></TotalCountry>
+        <WorldComponent dataByCategory={dataByCategory}></WorldComponent>
+        <PoliticsNews dataByCategory={dataByCategory}></PoliticsNews>
+        <TotalCountry dataByCategory={dataByCategory}></TotalCountry>
 
-        <Entertainment></Entertainment>
-        <Motamot_Component></Motamot_Component>
+        <Entertainment dataByCategory={dataByCategory}></Entertainment>
+        <Motamot_Component dataByCategory={dataByCategory}></Motamot_Component>
         <VideoShowSection></VideoShowSection>
       </div>
       <FooterComponents></FooterComponents>
