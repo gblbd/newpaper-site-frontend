@@ -55,18 +55,18 @@ const BannerRecentNews = ({ data }) => {
           {/* side data */}
           <div className="">
             {sideNews.map((news, index) => (
-              <div key={index}>
-                <div className="flex gap-2 mt-0">
-                  <div>
+              <div key={index} className="h-48 mb-4">
+                <div className="grid grid-cols-5 gap-2 mt-0 h-full overflow-hidden">
+                  <div className="col-span-2  ">
                     <Image
-                      className="sm:w-[470px] sm:h-[174px] w-[900px] h-full"
+                      className="h-full"
                       src={news.newsImage}
-                      width={0}
-                      height={0}
+                      width={500}
+                      height={500}
                       alt="image"
-                    ></Image>
+                    />
                   </div>
-                  <div className="w-100  items-start">
+                  <div className="col-span-3  items-start">
                     <Link href="/news-details">
                       <h2 className="font-bold text-[20px] mt-7">
                         {news.newsTitle}
@@ -90,7 +90,7 @@ const BannerRecentNews = ({ data }) => {
                 {index === 2 ? (
                   <div className=""></div>
                 ) : (
-                  <div className="h-1 w-100 border-b-[1px] border-black mt-2"></div>
+                  <div className="h-1 w-100 border-b-[1px] border-black "></div>
                 )}
               </div>
             ))}

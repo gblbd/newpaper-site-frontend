@@ -14,9 +14,9 @@ export const getServerSideProps = async () => {
       `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/categorey-data-list`
     );
     const categoryData = await categoryRes.json();
-    console.log(categoryData);
+
     // Initialize an object to store data by category
-    const dataByCategory = {};
+    const dataByCategory = [];
 
     // Fetch news data for each category
     await Promise.all(
@@ -27,11 +27,10 @@ export const getServerSideProps = async () => {
         const newsData = await newsRes.json();
 
         // Store data in the object with the category name as the key
-        dataByCategory[category.categoreyName] = {
+        dataByCategory.push({
           categoreyName: category.categoreyName,
           newsArray: newsData.result || [], // Use an empty array if no data
-        };
-        console.log("xxxx", dataByCategory);
+        });
       })
     );
 
