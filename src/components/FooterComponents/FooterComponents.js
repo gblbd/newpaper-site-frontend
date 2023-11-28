@@ -1,10 +1,48 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import logo from "../../assets/footer/footerlogo.png";
 import sideimg1 from "../../assets/footer/image1.png";
 import sideimg2 from "../../assets/footer/image2.png";
 import sideimg3 from "../../assets/footer/image3.png";
 const FooterComponents = () => {
+  const [newsList, setNewsList] = useState([]);
+
+  //fetch data from db
+  const [pageCount, setPageCount] = useState(0);
+  //page button er jonnno
+  const [page, setPage] = useState(0);
+
+  //load data
+  let size = 3;
+  useEffect(() => {
+    fetch(
+      `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/news-video-data-list?page=${page}&&size=${size}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setNewsList(data.finalResult);
+        //setDisplayProducts(data.finalResult);
+        const count = data.count;
+        const pageNumber = Math.ceil(count / size);
+        setPageCount(pageNumber);
+      });
+  }, [page]);
+
+  function formatBanglaDate(dateString) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+
+    const dateObject = new Date(dateString);
+    const formattedDate = new Intl.DateTimeFormat("bn-BD", options).format(
+      dateObject
+    );
+
+    return formattedDate;
+  }
   return (
     <div className="mt-10 max-w-7xl mx-auto">
       <div className="bg-footer-texture sm:w-full bg-cover bg-no-repeat">
@@ -87,84 +125,34 @@ const FooterComponents = () => {
               {" "}
               ভিডিও
             </h2>
-            <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
-              <div className="col-span-2">
-                <div className="">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-              <div className="col-span-3 mt-2">
-                <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                  কোনো আরব দেশই ফিলিস্তিনিদের জন্য সীমান্ত খুলছে না
-                </h2>
-                <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
-                  ২২ অক্টোবর ২০২৩
-                </p>
-              </div>
-            </div>
 
-            {/*  mew div */}
-            <div className="grid grid-cols-5 gap-4 mx-auto mt-4 ">
-              <div className="col-span-2">
-                <div className="">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+            {newsList.map((data) => (
+              <div
+                key={data._id}
+                className="grid grid-cols-5 gap-4 mx-auto mt-4 "
+              >
+                <div className="col-span-2">
+                  <div className="">
+                    <iframe
+                      className="w-full h-full"
+                      src={data.newsVideoUrl}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 </div>
-              </div>
-              <div className="col-span-3 mt-2">
-                <Link href="#">
+                <div className="col-span-3 mt-2">
                   <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                    জানা গেল ঘূর্ণিঝড় ‘তেজ’ কবে আঘাত হানবে
+                    {data.newsVideoTitle}
                   </h2>
-                </Link>
-
-                <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
-                  ২২ অক্টোবর ২০২৩
-                </p>
-              </div>
-            </div>
-
-            {/*  mew div */}
-
-            <div className="grid grid-cols-5 gap-4 mx-auto mt-4">
-              <div className="col-span-2">
-                <div className="">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/VED0G7Lemq8?si=3fToy43fFMu4KP7H"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+                  <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
+                    {formatBanglaDate(data?.createdAt)}
+                  </p>
                 </div>
               </div>
-              <div className="col-span-3 mt-2">
-                <Link href="#">
-                  <h2 className=" lg:text-[20px] sm:text-[14px] font-semibold text-white">
-                    জানা গেল ঘূর্ণিঝড় ‘তেজ’ কবে আঘাত হানবে
-                  </h2>
-                </Link>
-                <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
-                  ২২ অক্টোবর ২০২৩
-                </p>
-              </div>
-            </div>
-
-            {/*    new div */}
+            ))}
           </div>
           <div className=" mt-12">
             <h2 className="text-[26px] font-noto-sans-bengali  text-white text-center">
