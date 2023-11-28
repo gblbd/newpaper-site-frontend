@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import sideimg1 from "../../../assets/kitchen/kitchen2.png";
-import sideimg2 from "../../../assets/kitchen/kitchen3.png";
 import user from "../../../assets/kitchen/kitchen4.png";
 
 const Entertainment = ({ dataByCategory }) => {
@@ -70,7 +69,7 @@ const Entertainment = ({ dataByCategory }) => {
                 </h5> */}
                 </div>
                 <div className=" px-1">
-                  <Link href="/news-details">
+                  <Link href={`/news-details/${leftNews[0]?._id}`}>
                     <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                       {leftNews[0]?.newsTitle}
                     </h2>
@@ -86,12 +85,12 @@ const Entertainment = ({ dataByCategory }) => {
                     }}
                     className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify"
                   ></p>
-                  <button
-                    type="button"
+                  <Link
+                    href={`/news-details/${leftNews[0]?._id}`}
                     className=" font-semibold mb-4 hover:text-[#be5959]"
                   >
                     বিস্তারিত...
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="">
@@ -107,7 +106,7 @@ const Entertainment = ({ dataByCategory }) => {
                         ></Image>
                       </div>
                       <div className="col-span-4 items-start mt-4">
-                        <Link href="/news-details">
+                        <Link href={`/news-details/${data?._id}`}>
                           <h2 className="font-bold text-[20px]">
                             {data?.newsTitle}
                           </h2>
@@ -138,7 +137,7 @@ const Entertainment = ({ dataByCategory }) => {
                 </h5> */}
                 </div>
                 <div className=" px-1">
-                  <Link href="/news-details">
+                  <Link href={`/news-details/${rightNews[0]?._id}`}>
                     <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                       {rightNews[0]?.newsTitle}
                     </h2>
@@ -153,12 +152,12 @@ const Entertainment = ({ dataByCategory }) => {
                     }}
                     className="font-medium lg:text-[20px] text-[14px] mb-2  font-noto-sans-bengali text-justify"
                   ></p>
-                  <button
-                    type="button"
+                  <Link
+                    href={`/news-details/${rightNews[0]?._id}`}
                     className=" font-semibold mb-4 hover:text-[#be5959]"
                   >
                     বিস্তারিত...
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="mt-2">
@@ -174,7 +173,7 @@ const Entertainment = ({ dataByCategory }) => {
                         ></Image>
                       </div>
                       <div className="col-span-4 items-start mt-4">
-                        <Link href="/news-details">
+                        <Link href={`/news-details/${data?._id}`}>
                           <h2 className="font-bold text-[20px]">
                             {data?.newsTitle}
                           </h2>
@@ -186,26 +185,6 @@ const Entertainment = ({ dataByCategory }) => {
                     </div>
                   ))}
                   {/*  mew div */}
-
-                  <div className="grid grid-cols-7 gap-4 ">
-                    <div className="col-span-3">
-                      <Image
-                        className="w-full mt-4"
-                        src={sideimg2}
-                        alt="image"
-                      ></Image>
-                    </div>
-                    <div className="col-span-4 items-start mt-4">
-                      <Link href="/news-details">
-                        <h2 className="font-bold text-[20px]">
-                          ফিল্ম রিভিউ: ফ্রি সোলো— স্ট্রেঞ্জ হারবারস
-                        </h2>
-                      </Link>
-                      <p className="font-normal text-[16px]  font-noto-sans-bengali">
-                        ২২ অক্টোবর ২০২৩
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

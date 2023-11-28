@@ -66,7 +66,7 @@ const WorldComponent = ({ dataByCategory }) => {
               </h5> */}
                 </div>
                 <div className=" px-1">
-                  <Link href="/news-details">
+                  <Link href={`/news-details/${mainNews?._id}`}>
                     <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                       {mainNews?.newsTitle}
                     </h2>
@@ -82,12 +82,12 @@ const WorldComponent = ({ dataByCategory }) => {
                     }}
                     className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify"
                   ></p>
-                  <button
-                    type="button"
+                  <Link
+                    href={`/news-details/${mainNews?._id}`}
                     className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
                   >
                     বিস্তারিত...
-                  </button>
+                  </Link>
                 </div>
               </div>
               {/* side data */}

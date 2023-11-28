@@ -31,7 +31,7 @@ const BannerRecentNews = ({ data }) => {
               </h5>
             </div>
             <div className=" px-1">
-              <Link href="/news-details">
+              <Link href={`/news-details/${mainNews?._id}`}>
                 <h2 className="font-bold lg:text-[30px] text-[16px] font-noto-sans-bengali mt-6 mb-4">
                   {mainNews.newsTitle}
                 </h2>
@@ -43,12 +43,12 @@ const BannerRecentNews = ({ data }) => {
                 className="font-medium lg:text-[20px] text-[14px] mb-4 font-noto-sans-bengali text-justify"
               />
             </div>
-            <Link href="/news-details">
+            <Link href={`/news-details/${mainNews?._id}`}>
               <button
                 type="button"
                 className=" sm:m-4 m-4 hover:text-[#be5959]"
               >
-                বিস্তারিত...
+                বিস্তারিত..
               </button>
             </Link>
           </div>
@@ -67,7 +67,7 @@ const BannerRecentNews = ({ data }) => {
                     />
                   </div>
                   <div className="col-span-3  items-start">
-                    <Link href="/news-details">
+                    <Link href={`/news-details/${news?._id}`}>
                       <h2 className="font-bold text-[20px] mt-7">
                         {news.newsTitle}
                       </h2>
@@ -79,12 +79,13 @@ const BannerRecentNews = ({ data }) => {
                         __html: news?.newsDetailsText.slice(0, 100),
                       }}
                     ></p>
-                    <button
+                    <Link
                       type="button"
+                      href={`/news-details/${news?._id}`}
                       className=" font-semibold mb-4 mt-4 hover:text-[#be5959]"
                     >
                       বিস্তারিত...
-                    </button>
+                    </Link>
                   </div>
                 </div>
                 {index === 2 ? (

@@ -68,7 +68,7 @@ const Motamot_Component = ({ dataByCategory }) => {
                 </h5> */}
                 </div>
                 <div className=" px-1">
-                  <Link href="/news-details">
+                  <Link href={`/news-details/${leftNews[0]?._id}`}>
                     <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                       {leftNews[0]?.newsTitle}
                     </h2>
@@ -83,12 +83,12 @@ const Motamot_Component = ({ dataByCategory }) => {
                     }}
                     className="font-medium lg:text-[20px] text-[14px] mb-4  font-noto-sans-bengali text-justify"
                   ></p>
-                  <button
-                    type="button"
+                  <Link
+                    href={`/news-details/${leftNews[0]?._id}`}
                     className=" font-semibold mb-4 hover:text-[#be5959]"
                   >
                     বিস্তারিত...
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="">
@@ -104,7 +104,7 @@ const Motamot_Component = ({ dataByCategory }) => {
                         ></Image>
                       </div>
                       <div className="col-span-4 items-start mt-4">
-                        <Link href="/news-details">
+                        <Link href={`/news-details/${data?._id}`}>
                           <h2 className="font-bold text-[20px]">
                             {data?.newsTitle}
                           </h2>
@@ -135,7 +135,7 @@ const Motamot_Component = ({ dataByCategory }) => {
                 </h5> */}
                 </div>
                 <div className=" px-1">
-                  <Link href="/news-details">
+                  <Link href={`/news-details/${rightNews[0]?._id}`}>
                     <h2 className="font-bold lg:text-[25px] text-[16px] mt-4">
                       {rightNews[0]?.newsTitle}
                     </h2>
@@ -150,12 +150,12 @@ const Motamot_Component = ({ dataByCategory }) => {
                     }}
                     className="font-medium lg:text-[20px] text-[14px] mb-2  font-noto-sans-bengali text-justify"
                   ></p>
-                  <button
-                    type="button"
+                  <Link
+                    href={`/news-details/${rightNews[0]?._id}`}
                     className=" font-semibold mb-4 hover:text-[#be5959]"
                   >
                     বিস্তারিত...
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="mt-2">
@@ -171,7 +171,7 @@ const Motamot_Component = ({ dataByCategory }) => {
                         ></Image>
                       </div>
                       <div className="col-span-4 items-start mt-4">
-                        <Link href="/news-details">
+                        <Link href={`/news-details/${data._id}`}>
                           <h2 className="font-bold text-[20px]">
                             {data?.newsTitle}
                           </h2>

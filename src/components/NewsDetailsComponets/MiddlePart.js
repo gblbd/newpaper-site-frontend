@@ -1,35 +1,41 @@
 import Image from "next/image";
-import adds from "../../assets/details/add.png";
-import images from "../../assets/details/image.png";
-const MiddlePart = () => {
+const MiddlePart = ({ newsItem }) => {
+  console.log("newsItem", newsItem.newsImage);
   return (
     <div>
       <div className="w-full  font-noto-sans-bengali font-normal text-center">
         <p className="font-bold text-black text-3xl text-center items-center">
-          বাসচাপায় প্রাণ গেল একই পরিবারের সাতজনের
+          {newsItem.newsTitle}
         </p>
       </div>
       <div className="w-full h-full mt-6">
-        <Image src={images} alt="image"></Image>
+        <Image
+          className="w-full h-full"
+          src={newsItem.newsImage}
+          width={0}
+          height={0}
+          alt="image"
+        ></Image>
         <p className="font-noto-sans-bengali font-normal text-center py-4">
-          হাটহাজারিতে দুর্ঘটনাস্থলে মরদেহ উদ্ধার করছেন পুলিশ ও ফায়ার সার্ভিসের
-          কর্মীরা।
+          {newsItem?.newsTitle}
         </p>
       </div>
       <div className="mt-6">
         <div>
-          <p className="font-noto-sans-bengali font-normal text-justify">
-            চট্টগ্রামের হাটহাজারীতে বাস-সিএনজিচালিত অটোরিকশার মুখোমুখি সংঘর্ষে
-            শিশুসহ সাতজন নিহত হয়েছেন। মঙ্গলবার ( নভেম্বর) বেলা পৌনে ১২টার দিকে
-            চট্টগ্রাম-খাগড়াছড়ি মহাসড়ক উপজেলার মির্জাপুর ইউনিয়নস্থ চারিয়া বোর্ড
-            স্কুল ইজতেমা মাঠ এলাকায় এ দুর্ঘটনা ঘটে। ওই দুর্ঘটনায় চালকসহ এক
-            যাত্রী গুরুতর আহত হয়েছে। তবে চালকের অবস্থা আশংকাজনক বলে কালবেলাকে
-            জানিয়েছেন হাটহাজারী উপজেলা স্বাস্থ্য কমপ্লেক্সের চিকিৎসক ডা. শাহরিন
-            আনোয়ার।
-          </p>
+          <p
+            className="font-noto-sans-bengali font-normal text-justify"
+            dangerouslySetInnerHTML={{
+              __html: newsItem?.newsDetailsText,
+            }}
+          ></p>
         </div>
-        <div className="w-full my-6">
-          <Image src={adds} alt="image"></Image>
+        {/*   <div className="w-full my-6">
+          <Image
+            src={newsItem.newsImage}
+            width={0}
+            height={0}
+            alt="image"
+          ></Image>
         </div>
         <div>
           <p className="font-noto-sans-bengali font-normal text-justify">
@@ -61,7 +67,7 @@ const MiddlePart = () => {
             ছাত্রসমাজের সভাপতি ফয়েজ আহমেদ, ছাত্র জমিয়তের সভাপতি আদনান আহমেদ
             প্রমুখ।
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

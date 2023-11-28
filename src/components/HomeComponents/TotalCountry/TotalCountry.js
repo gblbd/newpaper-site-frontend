@@ -79,7 +79,7 @@ const TotalCountry = () => {
                 ></Image>
               </div>
               <div className="mt-2">
-                <Link href="#">
+                <Link href={`/news-details/${data._id}`}>
                   <h2 className="font-noto-sans-bengali text-black font-medium">
                     {data.newsTitle}
                   </h2>
