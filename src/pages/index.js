@@ -4,20 +4,58 @@ import HomePage from "./homepage";
 const inter = Inter({ subsets: ["latin"] });
 
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:5001/api/all-recent-news-list");
-  const data = await res.json();
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/all-recent-news-list`
+    );
+    const data = await res.json();
 
-  return {
-    props: {
-      data,
-    },
-  };
+    const categoryRes = await fetch(
+      `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/categorey-data-list`
+    );
+    const categoryData = await categoryRes.json();
+    console.log(categoryData);
+    // Initialize an object to store data by category
+    const dataByCategory = {};
+
+    // Fetch news data for each category
+    await Promise.all(
+      categoryData.map(async (category) => {
+        const newsRes = await fetch(
+          `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/all-news-by-categorey-list/${category._id}`
+        );
+        const newsData = await newsRes.json();
+
+        // Store data in the object with the category name as the key
+        dataByCategory[category.categoreyName] = {
+          categoreyName: category.categoreyName,
+          newsArray: newsData.result || [], // Use an empty array if no data
+        };
+        console.log("xxxx", dataByCategory);
+      })
+    );
+
+    return {
+      props: {
+        data,
+        dataByCategory: dataByCategory,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+
+    return {
+      props: {
+        categoryData: [],
+      },
+    };
+  }
 };
 
-export default function Home({ data }) {
+export default function Home({ data, dataByCategory }) {
   return (
     <main>
-      <HomePage data={data}></HomePage>
+      <HomePage data={data} dataByCategory={dataByCategory}></HomePage>
     </main>
   );
 }

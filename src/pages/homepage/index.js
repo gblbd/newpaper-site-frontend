@@ -11,14 +11,14 @@ import WorldComponent from "@/components/HomeComponents/WorldComponent/WorldComp
 import PoliticsNews from "@/components/HomeComponents/politcisNews/PoliticsNews";
 import Navbar from "@/components/Shared/Navbar/Navbar";
 
-const HomePage = ({ data }) => {
+const HomePage = ({ data, dataByCategory }) => {
   return (
     <div>
       <Navbar></Navbar>
       <div className="max-w-7xl mx-auto">
         <BannerRecentNews data={data}></BannerRecentNews>
         <Advertise></Advertise>
-        <NationalNewsPart></NationalNewsPart>
+        <NationalNewsPart dataByCategory={dataByCategory}></NationalNewsPart>
         <WorldComponent></WorldComponent>
         <PoliticsNews></PoliticsNews>
         <TotalCountry></TotalCountry>

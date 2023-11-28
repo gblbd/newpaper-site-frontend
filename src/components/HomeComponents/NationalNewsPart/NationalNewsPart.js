@@ -6,7 +6,8 @@ import sideimg2 from "../../../assets/national/image2.png";
 import sideimg3 from "../../../assets/national/image3.png";
 import sideimg4 from "../../../assets/national/image4.png";
 import user from "../../../assets/national/user2.png";
-const NationalNewsPart = () => {
+const NationalNewsPart = ({ dataByCategory }) => {
+  console.log("dataByCategory", dataByCategory);
   return (
     <div className=" mt-4 grid lg:grid-cols-3 gap-4">
       <div className="lg:col-span-2 ">
