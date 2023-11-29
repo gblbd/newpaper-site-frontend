@@ -14,7 +14,7 @@ const BannerRecentNews = ({ data }) => {
 
     const mainNewsx = data[0];
     setMainNews(mainNewsx);
-    const sideNews = data.slice(1, 4);
+    const sideNews = data?.slice(1, 4);
     setSideNews(sideNews);
   }, []);
 
