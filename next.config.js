@@ -2,7 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
   env: {
     NEXT_PUBLIC_REACT_APP_API: process.env.NEXT_PUBLIC_REACT_APP_API,
