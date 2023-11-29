@@ -12,8 +12,8 @@ const MiddlePart = ({ newsItem }) => {
         <Image
           className="w-full h-full"
           src={newsItem.newsImage}
-          width={0}
-          height={0}
+          width={500}
+          height={500}
           alt="image"
         ></Image>
         <p className="font-noto-sans-bengali font-normal text-center py-4">
@@ -32,8 +32,8 @@ const MiddlePart = ({ newsItem }) => {
         {/*   <div className="w-full my-6">
           <Image
             src={newsItem.newsImage}
-            width={0}
-            height={0}
+            width={500}
+            height={500}
             alt="image"
           ></Image>
         </div>

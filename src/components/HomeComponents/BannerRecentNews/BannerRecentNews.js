@@ -25,9 +25,9 @@ const BannerRecentNews = ({ data }) => {
           <div className="">
             <div>
               <Image
-                className="w-full"
-                width={0}
-                height={0}
+                className="w-full h-full"
+                width={500}
+                height={500}
                 src={mainNews.newsImage}
                 alt="img"
               ></Image>

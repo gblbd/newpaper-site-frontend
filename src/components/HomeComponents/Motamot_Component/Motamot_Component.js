@@ -57,8 +57,8 @@ const Motamot_Component = ({ dataByCategory }) => {
                 <div>
                   <Image
                     className="w-full"
-                    width={0}
-                    height={0}
+                    width={500}
+                    height={500}
                     src={leftNews[0]?.newsImage}
                     alt="img"
                   ></Image>
@@ -97,8 +97,8 @@ const Motamot_Component = ({ dataByCategory }) => {
                       <div className="col-span-3">
                         <Image
                           className="w-full mt-4"
-                          width={0}
-                          height={0}
+                          width={500}
+                          height={500}
                           src={data?.newsImage}
                           alt="image"
                         ></Image>
@@ -124,8 +124,8 @@ const Motamot_Component = ({ dataByCategory }) => {
                 <div>
                   <Image
                     className="w-full"
-                    width={0}
-                    height={0}
+                    width={500}
+                    height={500}
                     src={rightNews[0]?.newsImage}
                     alt="img"
                   ></Image>
@@ -164,8 +164,8 @@ const Motamot_Component = ({ dataByCategory }) => {
                       <div className="col-span-3">
                         <Image
                           className="w-full mt-4"
-                          width={0}
-                          height={0}
+                          width={500}
+                          height={500}
                           src={data?.newsImage}
                           alt="image"
                         ></Image>

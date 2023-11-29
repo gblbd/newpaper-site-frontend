@@ -63,8 +63,8 @@ const NationalNewsPart = ({ dataByCategory }) => {
                 <div>
                   <Image
                     className="w-full"
-                    width={0}
-                    height={0}
+                    width={500}
+                    height={500}
                     src={mainNews?.newsImage}
                     alt="img"
                   ></Image>
@@ -107,8 +107,8 @@ const NationalNewsPart = ({ dataByCategory }) => {
                         <Image
                           className="w-full h-full"
                           src={news.newsImage}
-                          width={0}
-                          height={0}
+                          width={500}
+                          height={500}
                           alt="image"
                         ></Image>
                       </div>
@@ -146,8 +146,8 @@ const NationalNewsPart = ({ dataByCategory }) => {
                 <h3> {formatBanglaDate(sompadokNews?.createdAt)}</h3>
                 <Image
                   className="w-full h-[185px]"
-                  width={0}
-                  height={0}
+                  width={500}
+                  height={500}
                   src={sompadokNews?.newsImage}
                   alt=""
                 ></Image>

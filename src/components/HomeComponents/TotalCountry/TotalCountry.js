@@ -72,8 +72,8 @@ const TotalCountry = () => {
               <div className="h-64">
                 <Image
                   className="w-full h-full"
-                  width={0}
-                  height={0}
+                  width={500}
+                  height={500}
                   src={data.newsImage}
                   alt="image"
                 ></Image>
