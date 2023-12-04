@@ -10,10 +10,12 @@ const PoliticsNews = ({ dataByCategory }) => {
   const [leftNews, setLeftNews] = useState([]);
 
   const [rightNews, setRightNews] = useState([]);
+  console.log("vvvvv", dataByCategory);
+
   useEffect(() => {
     setIsClient(true);
     if (dataByCategory) {
-      let dataNews = dataByCategory.filter(
+      let dataNews = dataByCategory.find(
         (data) => data.categoreyName === "রাজনীতি"
       );
       console.log("dataNewsxx", dataNews);
@@ -84,7 +86,7 @@ const PoliticsNews = ({ dataByCategory }) => {
                   <h3 className="mt-4 mb-2">
                     {" "}
                     {leftNews[0]?.createdAt &&
-                      formatDate(leftNews[0].createdAt)}
+                      formatBanglaDate(leftNews[0].createdAt)}
                   </h3>
                   <p
                     dangerouslySetInnerHTML={{

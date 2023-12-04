@@ -74,7 +74,8 @@ const MotamotComponent = ({ dataByCategory }) => {
                   </Link>
 
                   <h3 className="mt-4 mb-2">
-                    {formatBanglaDate(leftNews[0]?.createdAt)}
+                    {leftNews[0]?.createdAt &&
+                      formatBanglaDate(leftNews[0].createdAt)}
                   </h3>
                   <p
                     dangerouslySetInnerHTML={{
@@ -113,7 +114,7 @@ const MotamotComponent = ({ dataByCategory }) => {
                         </Link>
 
                         <p className="font-normal text-[16px]  font-noto-sans-bengali">
-                          {formatBanglaDate(data?.createdAt)}
+                          {data?.createdAt && formatBanglaDate(data.createdAt)}
                         </p>
                       </div>
                     </div>
@@ -144,7 +145,8 @@ const MotamotComponent = ({ dataByCategory }) => {
                   </Link>
 
                   <h3 className="mt-4 mb-2">
-                    {formatBanglaDate(rightNews[0]?.createdAt)}
+                    {rightNews[0]?.createdAt &&
+                      formatBanglaDate(rightNews[0].createdAt)}
                   </h3>
                   <p
                     dangerouslySetInnerHTML={{
@@ -182,7 +184,7 @@ const MotamotComponent = ({ dataByCategory }) => {
                           </h2>
                         </Link>
                         <p className="font-normal text-[16px]  font-noto-sans-bengali">
-                          {formatBanglaDate(data?.createdAt)}
+                          {data?.createdAt && formatBanglaDate(data.createdAt)}
                         </p>
                       </div>
                     </div>

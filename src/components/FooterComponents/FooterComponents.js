@@ -148,7 +148,7 @@ const FooterComponents = () => {
                     {data.newsVideoTitle}
                   </h2>
                   <p className=" lg:text-[16px] sm:text-[14px] font-noto-sans-bengali  text-white">
-                    {formatBanglaDate(data?.createdAt)}
+                    {data?.createdAt && formatBanglaDate(data.createdAt)}
                   </p>
                 </div>
               </div>
