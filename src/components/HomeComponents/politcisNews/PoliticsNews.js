@@ -6,37 +6,45 @@ import user from "../../../assets/national/story.png";
 
 const PoliticsNews = ({ dataByCategory }) => {
   const [isClient, setIsClient] = useState(false);
-  const [leftNews, setLeftNews] = useState("");
 
-  const [rightNews, setRightNews] = useState("");
+  const [leftNews, setLeftNews] = useState([]);
 
+  const [rightNews, setRightNews] = useState([]);
   useEffect(() => {
     setIsClient(true);
     if (dataByCategory) {
-      let dataNews = dataByCategory.find(
-        (data) => data.categoreyName === "আন্তর্জাতিক"
+      let dataNews = dataByCategory.filter(
+        (data) => data.categoreyName === "রাজনীতি"
       );
-      setLeftNews(dataNews.newsArray.slice(0, 3));
-      const side = dataNews.newsArray.slice(3, 6);
-      setRightNews(side);
+      console.log("dataNewsxx", dataNews);
+
+      setLeftNews(dataNews.newsArray?.slice(0, 3));
+
+      setRightNews(dataNews.newsArray?.slice(3, 6));
     }
   }, []);
 
-  function formatBanglaDate(dateString) {
+  console.log("1leftNews", leftNews);
+  console.log("2rightNews", rightNews);
+  function formatBanglaDate(dateStr) {
+    //const dateStr = "2023-11-28T10:45:29.729+00:00";
+    const date = new Date(dateStr);
+
     const options = {
       year: "numeric",
       month: "long",
       day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
     };
 
-    const dateObject = new Date(dateString);
     const formattedDate = new Intl.DateTimeFormat("bn-BD", options).format(
-      dateObject
+      date
     );
 
     return formattedDate;
   }
-
   return (
     <>
       {isClient ? (
@@ -75,7 +83,8 @@ const PoliticsNews = ({ dataByCategory }) => {
 
                   <h3 className="mt-4 mb-2">
                     {" "}
-                    {formatBanglaDate(leftNews[0]?.createdAt)}
+                    {leftNews[0]?.createdAt &&
+                      formatDate(leftNews[0].createdAt)}
                   </h3>
                   <p
                     dangerouslySetInnerHTML={{
@@ -107,13 +116,13 @@ const PoliticsNews = ({ dataByCategory }) => {
                         ></Image>
                       </div>
                       <div className="col-span-4 items-start mt-4">
-                        <Link href={`/news-details/${data?._id}`}>
+                        <Link href={`/news-details/${data._id}`}>
                           <h2 className="font-bold text-[20px]">
-                            {data?.newsTitle}
+                            {data.newsTitle}
                           </h2>
                         </Link>
                         <p className="font-normal text-[16px]  font-noto-sans-bengali">
-                          {formatBanglaDate(data?.createdAt)}
+                          {data?.createdAt && formatBanglaDate(data.createdAt)}
                         </p>
                       </div>
                     </div>
@@ -145,7 +154,8 @@ const PoliticsNews = ({ dataByCategory }) => {
 
                   <h3 className="mt-4 mb-2">
                     {" "}
-                    {formatBanglaDate(rightNews[0]?.createdAt)}
+                    {rightNews[0]?.createdAt &&
+                      formatBanglaDate(rightNews[0].createdAt)}
                   </h3>
                   <p
                     dangerouslySetInnerHTML={{
@@ -172,18 +182,18 @@ const PoliticsNews = ({ dataByCategory }) => {
                           className="w-full h-full mt-4"
                           width={500}
                           height={500}
-                          src={data?.newsImage}
+                          src={data.newsImage}
                           alt="image"
                         ></Image>
                       </div>
                       <div className="col-span-4 items-start mt-4">
-                        <Link href={`/news-details/${data?._id}`}>
+                        <Link href={`/news-details/${data._id}`}>
                           <h2 className="font-bold text-[20px]">
-                            {data?.newsTitle}
+                            {data.newsTitle}
                           </h2>
                         </Link>
                         <p className="font-normal text-[16px]  font-noto-sans-bengali">
-                          {formatBanglaDate(data?.createdAt)}
+                          {data?.createdAt && formatBanglaDate(data.createdAt)}
                         </p>
                       </div>
                     </div>

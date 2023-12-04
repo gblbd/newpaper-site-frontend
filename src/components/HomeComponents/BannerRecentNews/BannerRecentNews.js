@@ -8,15 +8,12 @@ const BannerRecentNews = ({ data }) => {
   const [sideNews, setSideNews] = useState("");
   useEffect(() => {
     setIsClient(true);
-    if (!data || data.length === 0) {
-      return null; // Handle case when data is empty or not provided
-    }
 
     const mainNewsx = data[0];
     setMainNews(mainNewsx);
-    const sideNews = data?.slice(1, 4);
+    const sideNews = data.slice(1, 4);
     setSideNews(sideNews);
-  }, []);
+  }, [data]);
 
   return (
     <>

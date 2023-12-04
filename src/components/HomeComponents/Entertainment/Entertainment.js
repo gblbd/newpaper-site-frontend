@@ -5,8 +5,6 @@ import sideimg1 from "../../../assets/kitchen/kitchen2.png";
 import user from "../../../assets/kitchen/kitchen4.png";
 
 const Entertainment = ({ dataByCategory }) => {
-  console.log("dataByCategory", dataByCategory);
-
   const [isClient, setIsClient] = useState(false);
   const [leftNews, setLeftNews] = useState("");
 

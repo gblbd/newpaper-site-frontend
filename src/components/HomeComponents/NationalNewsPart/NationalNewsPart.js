@@ -17,14 +17,14 @@ const NationalNewsPart = ({ dataByCategory }) => {
       const side = nationalNews.newsArray.slice(1, 5);
       setSideNews(side);
       //sompadok news work
-      let sompadokNewsData = dataByCategory.find(
-        (data) => data.categoreyName === "সম্পাদকীয়"
+      let sompadokNewsData = dataByCategory.find((data) =>
+        data.categoreyName === "সম্পাদকীয়" ? data : null
       );
 
-      if (sompadokNewsData.newsArray.length === null) {
+      if (sompadokNewsData?.newsArray?.length === null) {
         return "";
       } else {
-        setSompadokNews(sompadokNewsData.newsArray[0]);
+        setSompadokNews(sompadokNewsData?.newsArray[0]);
       }
     }
   }, []);

@@ -1,5 +1,16 @@
+import FooterComponents from "@/components/FooterComponents/FooterComponents";
+import Advertise from "@/components/HomeComponents/Addvertise/Advertise";
+import BannerRecentNews from "@/components/HomeComponents/BannerRecentNews/BannerRecentNews";
+import Entertainment from "@/components/HomeComponents/Entertainment/Entertainment";
+import NationalNewsPart from "@/components/HomeComponents/NationalNewsPart/NationalNewsPart";
+import TotalCountry from "@/components/HomeComponents/TotalCountry/TotalCountry";
+import VideoShowSection from "@/components/HomeComponents/VideoSHowSection/VideoShowSection";
+import WorldComponent from "@/components/HomeComponents/WorldComponent/WorldComponent";
+import PoliticsNews from "@/components/HomeComponents/politcisNews/PoliticsNews";
+import Navbar from "@/components/Shared/Navbar/Navbar";
 import { Inter } from "next/font/google";
-import HomePage from "./homepage";
+import { useEffect, useState } from "react";
+import MotamotComponent from "../components/HomeComponents/MotamotComponent/MotamotComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,9 +63,36 @@ export const getServerSideProps = async () => {
 };
 
 export default function Home({ data, dataByCategory }) {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <main>
-      <HomePage data={data} dataByCategory={dataByCategory}></HomePage>
+      {isClient ? (
+        <>
+          <Navbar></Navbar>
+          <div className="max-w-7xl mx-auto">
+            <BannerRecentNews data={data}></BannerRecentNews>
+            <Advertise></Advertise>
+            <NationalNewsPart
+              dataByCategory={dataByCategory}
+            ></NationalNewsPart>
+            <WorldComponent dataByCategory={dataByCategory}></WorldComponent>
+            <PoliticsNews dataByCategory={dataByCategory}></PoliticsNews>
+            <TotalCountry dataByCategory={dataByCategory}></TotalCountry>
+
+            <Entertainment dataByCategory={dataByCategory}></Entertainment>
+            <MotamotComponent
+              dataByCategory={dataByCategory}
+            ></MotamotComponent>
+            <VideoShowSection></VideoShowSection>
+          </div>
+          <FooterComponents></FooterComponents>
+        </>
+      ) : (
+        "loading"
+      )}
     </main>
   );
 }

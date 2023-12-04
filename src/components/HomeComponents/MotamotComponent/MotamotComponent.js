@@ -3,23 +3,22 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-const Motamot_Component = ({ dataByCategory }) => {
-  console.log("dataByCategory", dataByCategory);
-
+const MotamotComponent = ({ dataByCategory }) => {
   const [isClient, setIsClient] = useState(false);
   const [leftNews, setLeftNews] = useState("");
 
   const [rightNews, setRightNews] = useState("");
+  console.log("leftNews;;;", leftNews);
 
+  console.log("leftNews2;;", leftNews);
   useEffect(() => {
     setIsClient(true);
     if (dataByCategory) {
       let dataNews = dataByCategory.find(
-        (data) => data.categoreyName === "আন্তর্জাতিক"
+        (data) => data.categoreyName === "মতামত"
       );
       setLeftNews(dataNews.newsArray.slice(0, 3));
-      const side = dataNews.newsArray.slice(3, 6);
-      setRightNews(side);
+      setRightNews(dataNews.newsArray.slice(3, 6));
     }
   }, []);
 
@@ -37,7 +36,7 @@ const Motamot_Component = ({ dataByCategory }) => {
 
     return formattedDate;
   }
-  const [value, onChange] = useState(new Date());
+
   return (
     <>
       {isClient ? (
@@ -92,8 +91,11 @@ const Motamot_Component = ({ dataByCategory }) => {
                 </div>
 
                 <div className="">
-                  {leftNews.slice(1).map((data) => (
-                    <div key={data._id} className="grid grid-cols-7 gap-4 mt-0">
+                  {leftNews?.slice(1)?.map((data) => (
+                    <div
+                      key={data?._id}
+                      className="grid grid-cols-7 gap-4 mt-0"
+                    >
                       <div className="col-span-3">
                         <Image
                           className="w-full mt-4"
@@ -159,8 +161,11 @@ const Motamot_Component = ({ dataByCategory }) => {
                 </div>
 
                 <div className="mt-2">
-                  {rightNews.slice(1).map((data) => (
-                    <div key={data._id} className="grid grid-cols-7 gap-4 mt-0">
+                  {rightNews?.slice(1)?.map((data) => (
+                    <div
+                      key={data?._id}
+                      className="grid grid-cols-7 gap-4 mt-0"
+                    >
                       <div className="col-span-3">
                         <Image
                           className="w-full mt-4"
@@ -171,7 +176,7 @@ const Motamot_Component = ({ dataByCategory }) => {
                         ></Image>
                       </div>
                       <div className="col-span-4 items-start mt-4">
-                        <Link href={`/news-details/${data._id}`}>
+                        <Link href={`/news-details/${data?._id}`}>
                           <h2 className="font-bold text-[20px]">
                             {data?.newsTitle}
                           </h2>
@@ -201,7 +206,7 @@ const Motamot_Component = ({ dataByCategory }) => {
                 {/*  <p className="bg-[#066F30] text-center font-semibold text-white px-4">
               আর্কাইভ
             </p> */}
-                <Calendar className="" onChange={onChange} value={value} />
+                <Calendar className="" />
               </div>
               {/* 2 card desin */}
             </div>
@@ -214,4 +219,4 @@ const Motamot_Component = ({ dataByCategory }) => {
   );
 };
 
-export default Motamot_Component;
+export default MotamotComponent;

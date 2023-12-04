@@ -1,7 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { GiSightDisabled } from "react-icons/gi";
 import { MdOutlineDeleteOutline } from "react-icons/md";
@@ -11,24 +10,14 @@ import useAuth from "../../../hooks/useAuth";
 import { getCookie } from "../../../utilities/helper.js";
 // Function to make the GET request with JWT token
 
-const NewsListComponent = () => {
+const NewsListComponent = ({
+  newsList,
+  page,
+  pageCount,
+  setPageCount,
+  setPage,
+}) => {
   const { user, setUser, isLoading, setIsLoading } = useAuth();
-  const [newsList, setListNews] = useState([]);
-  useEffect(() => {
-    fetch(
-      `${process.env.NEXT_PUBLIC_REACT_APP_API}/api/all-news-list-admin-panel`,
-      {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${getCookie("token")}`,
-          "Content-Type": "application/json",
-          // Add other headers if needed
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => setListNews(data));
-  }, []);
 
   function formatBanglaDate(dateString) {
     const options = {
@@ -66,7 +55,6 @@ const NewsListComponent = () => {
       )
       .then((res) => {
         setIsLoading(false);
-        console.log(res);
 
         const posts = newsList.finalResult.filter((item) => item._id !== id);
         setListNews(posts);
@@ -141,6 +129,9 @@ const NewsListComponent = () => {
                       News
                     </th>
                     <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                      Categorey
+                    </th>
+                    <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                       Date
                     </th>
 
@@ -150,7 +141,7 @@ const NewsListComponent = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {newsList?.finalResult?.map((data) => (
+                  {newsList?.map((data) => (
                     <tr key={data._id}>
                       <td className="px-5 py-5 border-b border-r border-gray-200 bg-white text-sm">
                         <div className="flex">
@@ -169,6 +160,11 @@ const NewsListComponent = () => {
                             </p>
                           </div>
                         </div>
+                      </td>
+                      <td className="px-5 py-5 border-b border-r border-gray-200 bg-white text-sm">
+                        <p className="text-gray-900 whitespace-no-wrap">
+                          {data.categoryName}
+                        </p>
                       </td>
                       <td className="px-5 py-5 border-b border-r border-gray-200 bg-white text-sm">
                         <p className="text-gray-900 whitespace-no-wrap">
@@ -229,6 +225,63 @@ const NewsListComponent = () => {
               </table>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex justify-between ">
+        <div className="flex items-center justify-between   bg-white px-4 py-3 sm:px-6">
+          <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+            <div>
+              {page === 1 ? (
+                <button
+                  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled"
+                  disabled
+                >
+                  Previous
+                </button>
+              ) : (
+                <button
+                  onClick={() => setPage(page - 1)}
+                  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  Previous
+                </button>
+              )}
+              <nav
+                className="isolate inline-flex -space-x-px rounded-md shadow-sm"
+                aria-label="Pagination"
+              >
+                {[...Array(pageCount).keys()].map((number) => (
+                  <button
+                    key={number}
+                    onClick={() => setPage(number + 1)}
+                    aria-current="page"
+                    className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    {number + 1}
+                  </button>
+                ))}
+              </nav>
+              {page === pageCount ? (
+                <button
+                  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 "
+                  disabled
+                >
+                  Next
+                </button>
+              ) : (
+                <button
+                  onClick={() => setPage(page + 1)}
+                  className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  Next
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center">
+          <p className="font-normal text-black">17 এর 1 পৃষ্ঠা</p>
         </div>
       </div>
     </div>
